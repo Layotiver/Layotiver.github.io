@@ -14,7 +14,7 @@
 <meta property="og:description" content="长期更新由于实验室服务器用的是Linux系统，平时都是用ssh登录管理文件；另外，计算机专业不会Linux那肯定是说不过去的。之前只会一些很基本的linux指令，现在是时候系统地学一遍了。 计划是按照菜鸟教程学，每天学4个，并做好记录。也不求全部掌握吧，对于一些冷门的命令，但至少应该知道这大概是干什么用的。  2022.7.3catcat（英文全拼：concatenate）命令用于连接文件并打印到">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-07-03T07:49:49.000Z">
-<meta property="article:modified_time" content="2022-07-04T01:47:41.478Z">
+<meta property="article:modified_time" content="2022-07-05T01:27:56.556Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -126,8 +126,18 @@
 <h3 id="diff"><a href="#diff" class="headerlink" title="diff"></a>diff</h3><p>diff 命令用于比较文件的差异。</p>
 <p>diff 以逐行的方式，比较文本文件的异同处。如果指定要比较目录，则 diff 会比较目录中相同文件名的文件，但不会比较其中子目录。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ diff test.txt testt.txt</span><br><span class="line">1c1</span><br><span class="line">&lt; qwertyuiop</span><br><span class="line">---</span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> asdfghjkl</span></span><br><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ diff test.txt testt.txt -y -W 50</span><br><span class="line">qwertyuiop            | asdfghjkl</span><br></pre></td></tr></table></figure>
-
 <hr>
+<h2 id="2022-7-5"><a href="#2022-7-5" class="headerlink" title="2022.7.5"></a>2022.7.5</h2><h3 id="diffstat"><a href="#diffstat" class="headerlink" title="diffstat"></a>diffstat</h3><p>diffstat 命令根据diff的比较结果，显示统计数字。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ diff test.txt testt.txt | diffstat</span><br><span class="line"> unknown |    2 +-</span><br><span class="line"> 1 file changed, 1 insertion(+), 1 deletion(-)</span><br></pre></td></tr></table></figure>
+
+<h3 id="file"><a href="#file" class="headerlink" title="file"></a>file</h3><p>file 命令用于辨识文件类型。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ file test.txt</span><br><span class="line">test.txt: ASCII text</span><br></pre></td></tr></table></figure>
+
+<h3 id="find"><a href="#find" class="headerlink" title="find"></a>find</h3><p>find 命令用来在指定目录下查找文件。任何位于参数之前的字符串都将被视为欲查找的目录名。如果使用该命令时，不设置任何参数，则 find 命令将在当前目录下查找子目录与文件。并且将查找到的子目录和文件全部进行显示。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ find</span><br><span class="line">.</span><br><span class="line">./test.txt</span><br><span class="line">./testt.txt</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ find . -name &quot;*.txt&quot;</span><br><span class="line">./test.txt</span><br><span class="line">./testt.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="git"><a href="#git" class="headerlink" title="git"></a>git</h3><p>git 命令是文字模式下的文件管理员。</p>
+<p>咋感觉怪怪的。</p>
 
       
     </div>
