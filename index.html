@@ -148,6 +148,22 @@
 <h3 id="ln"><a href="#ln" class="headerlink" title="ln"></a>ln</h3><p>ln（英文全拼：link files）命令是一个非常重要命令，它的功能是为某一个文件在另外一个位置建立一个同步的链接。</p>
 <p>当我们需要在不同的目录，用到相同的文件时，我们不需要在每一个需要的目录下都放一个必须相同的文件，我们只要在某个固定的目录，放上该文件，然后在 其它的目录下用ln命令链接（link）它就可以，不必重复的占用磁盘空间。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~$ ls</span><br><span class="line">helloworld.txt  LearnLinux  learnvim  LearnVim.txt  test</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~$ cd LearnLinux/</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ ln test.txt ~/lntest.txt</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ cat test.txt</span><br><span class="line">qwertyuiop</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ cat ~/lntest.txt</span><br><span class="line">qwertyuiop</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ echo poiuytrewq &gt;&gt; test.txt</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ cat ~/lntest.txt</span><br><span class="line">qwertyuiop</span><br><span class="line">poiuytrewq</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="2022-7-10"><a href="#2022-7-10" class="headerlink" title="2022.7.10"></a>2022.7.10</h2><p>前两天写大作业去了，今天复更。</p>
+<h3 id="less"><a href="#less" class="headerlink" title="less"></a>less</h3><p>less 可以随意浏览文件，支持翻页和搜索，支持向上翻页和向下翻页。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ less test.txt</span><br></pre></td></tr></table></figure>
+<p>然后就可以查看、编辑文件</p>
+<h3 id="locate"><a href="#locate" class="headerlink" title="locate"></a>locate</h3><p>locate 命令用于查找符合条件的文档，他会去保存文档和目录名称的数据库内，查找合乎范本样式条件的文档或目录。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ locate /etc/sh</span><br><span class="line">/etc/shadow</span><br><span class="line">/etc/shadow-</span><br><span class="line">/etc/shells</span><br><span class="line">/snap/core/13308/etc/shadow</span><br><span class="line">/snap/core/13308/etc/shells</span><br><span class="line">/snap/core/13425/etc/shadow</span><br><span class="line">/snap/core/13425/etc/shells</span><br></pre></td></tr></table></figure>
+<p>感觉是找路径中有某个字段的文件</p>
+<h3 id="lsattr"><a href="#lsattr" class="headerlink" title="lsattr"></a>lsattr</h3><p>lsattr 命令用于显示文件属性。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ lsattr *.txt</span><br><span class="line">--------------e----- testt.txt</span><br><span class="line">--------------e----- test.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="mattrib"><a href="#mattrib" class="headerlink" title="mattrib"></a>mattrib</h3><p>mattrib 命令用来变更或显示MS-DOS文件的属性。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ mattrib a:</span><br><span class="line">Can&#x27;t open /dev/fd0: No such file or directory</span><br><span class="line">Cannot initialize &#x27;A:&#x27;</span><br></pre></td></tr></table></figure>
+<p>不太会用</p>
+<hr>
+
       
     </div>
     <footer class="article-footer">
