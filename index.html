@@ -161,9 +161,18 @@
 
 <h3 id="mattrib"><a href="#mattrib" class="headerlink" title="mattrib"></a>mattrib</h3><p>mattrib 命令用来变更或显示MS-DOS文件的属性。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ mattrib a:</span><br><span class="line">Can&#x27;t open /dev/fd0: No such file or directory</span><br><span class="line">Cannot initialize &#x27;A:&#x27;</span><br></pre></td></tr></table></figure>
-<p>不太会用</p>
-<hr>
+<h2 id="不懂啥是MS-DOS文件，不太会用"><a href="#不懂啥是MS-DOS文件，不太会用" class="headerlink" title="不懂啥是MS-DOS文件，不太会用"></a>不懂啥是MS-DOS文件，不太会用</h2><h2 id="2022-7-11"><a href="#2022-7-11" class="headerlink" title="2022.7.11"></a>2022.7.11</h2><h3 id="mc"><a href="#mc" class="headerlink" title="mc"></a>mc</h3><p>mc 命令用于提供一个菜单式的文件管理程序。</p>
+<img src="/2022/07/03/%E5%AD%A6%E4%B9%A0Linux%E5%91%BD%E4%BB%A4/2.png" class="" title="mc的界面">
 
+<p>还挺有意思的</p>
+<h3 id="mdel"><a href="#mdel" class="headerlink" title="mdel"></a>mdel</h3><p>mdel 命令用来删除 MSDOS 格式的档案。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ mdel -h</span><br><span class="line">Mtools version 4.0.24, dated December 9th, 2018</span><br><span class="line">Usage: mdel [-v] msdosfile [msdosfiles...]</span><br></pre></td></tr></table></figure>
+<p>可不敢乱删</p>
+<h3 id="mdir"><a href="#mdir" class="headerlink" title="mdir"></a>mdir</h3><p>mdir 为mtools工具指令，模拟MS-DOS的dir指令，可显示MS-DOS文件系统中的目录内容。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ mdir</span><br><span class="line">Can&#x27;t open /dev/fd0: No such file or directory</span><br><span class="line">Cannot initialize &#x27;A:&#x27;</span><br></pre></td></tr></table></figure>
+<p>看来是不是需要去学一下MSDOS的知识</p>
+<h3 id="mktemp"><a href="#mktemp" class="headerlink" title="mktemp"></a>mktemp</h3><p>mktemp 建立的一个暂存文件，供shell script使用。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ mktemp</span><br><span class="line">/tmp/tmp.41OvGSRWJn</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ cat /tmp/tmp.41OvGSRWJn</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ echo &quot;this is a temp file&quot; &gt; /tmp/tmp.41OvGSRWJn</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ cat /tmp/tmp.41OvGSRWJn</span><br><span class="line">this is a temp file</span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
