@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-10-24T07:18:14.000Z</updated>
+  <updated>2022-07-11T11:05:26.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,26 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://example.com/2022/11/08/hello-world/"/>
-    <id>http://example.com/2022/11/08/hello-world/</id>
-    <published>2022-11-08T11:55:40.125Z</published>
-    <updated>2021-10-24T07:18:14.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
-      
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>学习Linux命令</title>
@@ -411,6 +391,26 @@
       
       
     <summary type="html">&lt;h1 id=&quot;英语演讲结束，明天四国大战&quot;&gt;&lt;a href=&quot;#英语演讲结束，明天四国大战&quot; class=&quot;headerlink&quot; title=&quot;英语演讲结束，明天四国大战&quot;&gt;&lt;/a&gt;英语演讲结束，明天四国大战&lt;/h1&gt;&lt;p&gt;今天英语演讲终于结束了，说实话感觉英语演讲给我的压力</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>大二平日随笔III</title>
+    <link href="http://example.com/2021/10/30/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94III/"/>
+    <id>http://example.com/2021/10/30/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94III/</id>
+    <published>2021-10-30T14:18:17.000Z</published>
+    <updated>2021-10-30T15:03:06.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="今晚是书院选拔第一天"><a href="#今晚是书院选拔第一天" class="headerlink" title="今晚是书院选拔第一天"></a>今晚是书院选拔第一天</h1><p>这两天对四国大战院内选拔的事比较头疼，不知道该怎么组织，没有裁判，也没有球。后来转念一想，直接让他们书院内部的人决定每个项目派谁参加就好了。这样一来，没裁判和球也就顺理成章了。羽协只负责提供场地和二课学时，剩下的让书院内部自己决定。</p><p>结果也还真就是这么回事，最后也就这样把时珍和守敬两个书院的参赛选手选出来了。有时候还真的是要转变观念，当时发群公告说让选手自己带球的时候，我自己都觉得不太合适。只要把事情的性质改一下，很多东西一下子就变得说得过去了。</p><p>今天上午参加ICS讨论课，写完的数据结构和图论作业。数据结构有个题卡了一下，导致写完这两门作业的时候，已经11点多了。中午睡得还算舒坦，但是入睡并不是那么顺利。</p><p>当时书院选拔的事情还没决定下来，这件事一直在我心头上闹着让我睡不着。后来是打开ipad看了会儿git教程，然后注意力被转移了，犯困了就睡着了。</p><p>今晚穿着牛仔裤和花衬衫来到了球场。这次穿的羽毛球鞋，所以还是可以打两下的。最终确定和lzl组男双参加比赛。</p><p>跟lzl大佬聊了聊，挺受鼓舞的。自从担任会长以来，青春活力课程，游园会，物资申请，场地申请，社员大会，谁与争锋赛，每个活动都将我丢出了舒适圈外。不过回望这半个学期以来，我还是受益匪浅的，而且贡献也不算小吧。</p><p>前两天看到有人在群里抱怨不让兼项的问题，让我挺郁闷的。兼项会严重影响比赛进程，上次谁“羽”争锋赛我们几个忙到了快10点，连晚饭都吃不上，这些事是他们连知晓都做不到的。只凭着自己的意气风发，指点江山，让我看的有点不顺眼。</p><p>不过我也很快从这种负面情绪中走出来了。人与人有时候就是没办法相互理解，况且他们的抱怨还只是因为傻，而不是坏。从这里我也可以对社会运作的原理有新的认识。</p><p>lzl指出了我做得好的地方，比如分出了部门，内联的参与人数也有了大幅提升。我仔细想了想，今年羽协搞了新生活力课程，游园会也有项目了，参与内联的人数大量增加，谁与争锋赛的奖品也从冠军一两筒球变成了小米手环。</p><p>他还跟我讲了一些大佬的故事，我发现他们做事更加自由，更有信心，也更平静。反观我自己，平时担忧的事太多了，束手束脚的。比如我很担心大心拿不到比较高的绩点，进而让我学这门课的时候感觉到非常有压力。这种压力会降低我学习时的乐趣，学得不够自由，进而也就没办法平静了。我还是要坚定一下内心，然后找到自己的热情所在，这样才能成为理想的自己。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;今晚是书院选拔第一天&quot;&gt;&lt;a href=&quot;#今晚是书院选拔第一天&quot; class=&quot;headerlink&quot; title=&quot;今晚是书院选拔第一天&quot;&gt;&lt;/a&gt;今晚是书院选拔第一天&lt;/h1&gt;&lt;p&gt;这两天对四国大战院内选拔的事比较头疼，不知道该怎么组织，没有裁判，也没有球。</summary>
       
     
     
