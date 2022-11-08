@@ -1,32 +1,677 @@
-extends includes/layout.pug
 
-block content
-  #post
-    if top_img === false
-      include includes/header/post-info.pug
-
-    article#article-container.post-content!=page.content
-    include includes/post/post-copyright.pug
-    .tag_share
-      if (theme.post_meta.post.tags)
-        .post-meta__tag-list
-          each item, index in page.tags.data
-            a(href=url_for(item.path)).post-meta__tags #[=item.name]
-      include includes/third-party/share/index.pug
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Layotiver">
+    <title>大二平日随笔IV - Layotiver</title>
+    <meta name="author" content="John Doe">
+    
+    
+    
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"John Doe","sameAs":["https://github.com/","http://stackoverflow.com/users","https://twitter.com/","https://facebook.com/","https://plus.google.com/","https://www.linkedin.com/profile/","mailto"]},"articleBody":"英语演讲结束，明天四国大战今天英语演讲终于结束了，说实话感觉英语演讲给我的压力比数电期中还大。但是今天站在台上我其实不怎么紧张，声音自我感觉也挺洪亮的，比较不足的大概是时间不知道够不够长。这样一来，这学期的英语就结课了，周五早上的早课也就没了。再过一周复变也就结课了，又少了两节课。下周数电就要期中考了，目前还有一大堆东西要搞，数据结构，图论，数电，复变，概统，ICS的作业，数电，ICS的实验，数据结构的大作业。不过等明天四国大战打完，就应该可以多安心学习了。英语演讲和四国大战是让我比较操心的事。\n明天下午四国大战就开打了，现在华米赞助的奖品还没有到手。不过我心里竟然不着急，而且一点也不焦虑，这也算是我的进步吧。上次“谁‘羽’争锋”赛，我一人骑着自行车运了8个体重秤到宿舍已经是极限了，这次有45个体重称，估计得想办法弄到那种手推车。我感觉我心里不着急，是因为我有一种“就算搞砸了也就搞砸了，没啥大不了”的思想。毕竟仔细想来我在这里的本质身份是学生，管社团只是我自己在发光发热。我也不靠这吃饭，没必要为此操劳过度。\n不过话说回来我觉得我自己作为羽毛球协会会长做的还是蛮不错的，并且我也有心想要把这个社团做好，所以我也常反思，我有哪里做的不够的地方。目前想到的就是，我少了点社交能力。说实话，羽协干事成员不够多，虽然群里面有超过了一千人。群里关系比较密切的是一些研究生。还有一些新入学的学弟，他们很快就跟这些学长混熟了。说实话，他们在这方面能力上比我强得多。我还是有点社恐。\n今晚从教室走回宿舍的路上，我也构想了一下良好的羽协将是什么样子。首先要有明确的部门划分，这一步目前来看算是做到一半吧，成立了宣传部，组织部和采购部。这些部门首先要有明确的职能，然后每届可以招点新人进来，干活主要让新人去干，老成员主要负责指导他们。这个指导不仅仅包含的工作上的指导，还可以为他们的学习以及生活答疑解惑，进而关系融洽了之后就可以了在群里讨论实事热点，线下约饭，或者约着去哪里玩之类的。二课学时可以让新成员干活更有动力。而新成员干活需要向老成员请教，这样就产生了互动，人际关系也就发展起来了。这样持续个几年，当各部门的成员遍布了大一到大四，硕士，博士，群里的信息也就充足了。也就是说，一个新入学的萌新，能够在这里解决学习生活中的各种疑惑，从数分考试怎么准备到一卡通丢了怎么补办，而且还能时不时约着吃吃玩玩，干活也有人作伴，羽协才能给他们一种归属感。说实话，有人作伴挺重要的。但是羽协目前似乎没有这种良性循环，或许是因为目前羽协的社交性质不够突出。\n至少目前来看，我能想到这些点子好是吧，至于能不能像我想的那样去实现就不知道了。不过试一下也无妨，我当会长本来就是觉得这个时候试错成本低，可以放开手去干点事。就算干砸了一些事情，好像也没啥大不了的。如果在我当会长的这一年里面，我可以让自己更有自信，更敢于上台发言，事情没解决时少点焦虑，对社会运行的规则有更深入的理解，就已经算有收获了。\n","dateCreated":"2021-11-05T19:17:04+08:00","dateModified":"2021-11-05T20:58:40+08:00","datePublished":"2021-11-05T19:17:04+08:00","description":"","headline":"大二平日随笔IV","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2021/11/05/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94IV/"},"publisher":{"@type":"Organization","name":"John Doe","sameAs":["https://github.com/","http://stackoverflow.com/users","https://twitter.com/","https://facebook.com/","https://plus.google.com/","https://www.linkedin.com/profile/","mailto"]},"url":"http://example.com/2021/11/05/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94IV/"}</script>
+    <meta name="description" content="英语演讲结束，明天四国大战今天英语演讲终于结束了，说实话感觉英语演讲给我的压力比数电期中还大。但是今天站在台上我其实不怎么紧张，声音自我感觉也挺洪亮的，比较不足的大概是时间不知道够不够长。这样一来，这学期的英语就结课了，周五早上的早课也就没了。再过一周复变也就结课了，又少了两节课。下周数电就要期中考了，目前还有一大堆东西要搞，数据结构，图论，数电，复变，概统，ICS的作业，数电，ICS的实验，数据">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="大二平日随笔IV">
+<meta property="og:url" content="http://example.com/2021/11/05/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94IV/index.html">
+<meta property="og:site_name" content="Layotiver">
+<meta property="og:description" content="英语演讲结束，明天四国大战今天英语演讲终于结束了，说实话感觉英语演讲给我的压力比数电期中还大。但是今天站在台上我其实不怎么紧张，声音自我感觉也挺洪亮的，比较不足的大概是时间不知道够不够长。这样一来，这学期的英语就结课了，周五早上的早课也就没了。再过一周复变也就结课了，又少了两节课。下周数电就要期中考了，目前还有一大堆东西要搞，数据结构，图论，数电，复变，概统，ICS的作业，数电，ICS的实验，数据">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-11-05T11:17:04.000Z">
+<meta property="article:modified_time" content="2021-11-05T12:58:40.000Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+    
+    
         
-    if theme.reward.enable && theme.reward.QR_code
-      !=partial('includes/post/reward', {}, {cache: true})
+    
+    
+    
+    
+    
+    <!--STYLES-->
+    
+<link rel="stylesheet" href="/assets/css/all.css">
 
-    //- ad
-    if theme.ad && theme.ad.post
-      .ads-wrap!=theme.ad.post
+    
+<link rel="stylesheet" href="/assets/css/jquery.fancybox.css">
 
-    if theme.post_pagination
-      include includes/pagination.pug
-    if theme.related_post && theme.related_post.enable
-      != related_posts(page,site.posts)
+    
+<link rel="stylesheet" href="/assets/css/thumbs.css">
 
-    if page.comments !== false && theme.comments && theme.comments.use
-      - var commentsJsLoad = true
-      !=partial('includes/third-party/comments/index', {}, {cache: true})
-      
+    
+<link rel="stylesheet" href="/assets/css/tranquilpeak.css">
+
+    <!--STYLES END-->
+    
+
+    
+
+    
+        
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+
+<header id="header" data-behavior="4">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a
+            class="header-title-link"
+            href="/"
+            aria-label=""
+        >
+            Layotiver
+        </a>
+    </div>
+    
+        
+            <a
+                class="header-right-picture "
+                href="#about"
+                aria-label="Open the link: /#about"
+            >
+        
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+<nav id="sidebar" data-behavior="4">
+    <div class="sidebar-container">
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/"
+                            
+                            rel="noopener"
+                            title="Home"
+                        >
+                        <i class="sidebar-button-icon fa fa-home" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Home</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-categories"
+                            
+                            rel="noopener"
+                            title="Categories"
+                        >
+                        <i class="sidebar-button-icon fa fa-bookmark" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Categories</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-tags"
+                            
+                            rel="noopener"
+                            title="Tags"
+                        >
+                        <i class="sidebar-button-icon fa fa-tags" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Tags</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-archives"
+                            
+                            rel="noopener"
+                            title="Archives"
+                        >
+                        <i class="sidebar-button-icon fa fa-archive" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Archives</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link open-algolia-search"
+                            href="#search"
+                            
+                            rel="noopener"
+                            title="Search"
+                        >
+                        <i class="sidebar-button-icon fa fa-search" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Search</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="#about"
+                            
+                            rel="noopener"
+                            title="About"
+                        >
+                        <i class="sidebar-button-icon fa fa-question" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">About</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://github.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="GitHub"
+                        >
+                        <i class="sidebar-button-icon fab fa-github" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">GitHub</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="http://stackoverflow.com/users"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Stack Overflow"
+                        >
+                        <i class="sidebar-button-icon fab fa-stack-overflow" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Stack Overflow</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://twitter.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Twitter"
+                        >
+                        <i class="sidebar-button-icon fab fa-twitter" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Twitter</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://facebook.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Facebook"
+                        >
+                        <i class="sidebar-button-icon fab fa-facebook" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Facebook</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://plus.google.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Google +"
+                        >
+                        <i class="sidebar-button-icon fab fa-google-plus" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Google +</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://www.linkedin.com/profile/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="LinkedIn"
+                        >
+                        <i class="sidebar-button-icon fab fa-linkedin" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">LinkedIn</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/mailto"
+                            
+                            rel="noopener"
+                            title="Mail"
+                        >
+                        <i class="sidebar-button-icon fa fa-envelope" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Mail</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/atom.xml"
+                            
+                            rel="noopener"
+                            title="RSS"
+                        >
+                        <i class="sidebar-button-icon fa fa-rss" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">RSS</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+            
+            <div id="main" data-behavior="4"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+<article class="post">
+    
+    
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title">
+            大二平日随笔IV
+        </h1>
+    
+    
+        <div class="post-meta">
+    <time datetime="2021-11-05T19:17:04+08:00">
+	
+		    Nov 05, 2021
+    	
+    </time>
+    
+</div>
+
+    
+</div>
+
+    
+    <div class="post-content markdown">
+        <div class="main-content-wrap">
+            <h1 id="英语演讲结束，明天四国大战"><a href="#英语演讲结束，明天四国大战" class="headerlink" title="英语演讲结束，明天四国大战"></a>英语演讲结束，明天四国大战</h1><p>今天英语演讲终于结束了，说实话感觉英语演讲给我的压力比数电期中还大。但是今天站在台上我其实不怎么紧张，声音自我感觉也挺洪亮的，比较不足的大概是时间不知道够不够长。这样一来，这学期的英语就结课了，周五早上的早课也就没了。再过一周复变也就结课了，又少了两节课。下周数电就要期中考了，目前还有一大堆东西要搞，数据结构，图论，数电，复变，概统，ICS的作业，数电，ICS的实验，数据结构的大作业。不过等明天四国大战打完，就应该可以多安心学习了。英语演讲和四国大战是让我比较操心的事。</p>
+<p>明天下午四国大战就开打了，现在华米赞助的奖品还没有到手。不过我心里竟然不着急，而且一点也不焦虑，这也算是我的进步吧。上次“谁‘羽’争锋”赛，我一人骑着自行车运了8个体重秤到宿舍已经是极限了，这次有45个体重称，估计得想办法弄到那种手推车。我感觉我心里不着急，是因为我有一种“就算搞砸了也就搞砸了，没啥大不了”的思想。毕竟仔细想来我在这里的本质身份是学生，管社团只是我自己在发光发热。我也不靠这吃饭，没必要为此操劳过度。</p>
+<p>不过话说回来我觉得我自己作为羽毛球协会会长做的还是蛮不错的，并且我也有心想要把这个社团做好，所以我也常反思，我有哪里做的不够的地方。目前想到的就是，我少了点社交能力。说实话，羽协干事成员不够多，虽然群里面有超过了一千人。群里关系比较密切的是一些研究生。还有一些新入学的学弟，他们很快就跟这些学长混熟了。说实话，他们在这方面能力上比我强得多。我还是有点社恐。</p>
+<p>今晚从教室走回宿舍的路上，我也构想了一下良好的羽协将是什么样子。首先要有明确的部门划分，这一步目前来看算是做到一半吧，成立了宣传部，组织部和采购部。这些部门首先要有明确的职能，然后每届可以招点新人进来，干活主要让新人去干，老成员主要负责指导他们。这个指导不仅仅包含的工作上的指导，还可以为他们的学习以及生活答疑解惑，进而关系融洽了之后就可以了在群里讨论实事热点，线下约饭，或者约着去哪里玩之类的。二课学时可以让新成员干活更有动力。而新成员干活需要向老成员请教，这样就产生了互动，人际关系也就发展起来了。这样持续个几年，当各部门的成员遍布了大一到大四，硕士，博士，群里的信息也就充足了。也就是说，一个新入学的萌新，能够在这里解决学习生活中的各种疑惑，从数分考试怎么准备到一卡通丢了怎么补办，而且还能时不时约着吃吃玩玩，干活也有人作伴，羽协才能给他们一种归属感。说实话，有人作伴挺重要的。但是羽协目前似乎没有这种良性循环，或许是因为目前羽协的社交性质不够突出。</p>
+<p>至少目前来看，我能想到这些点子好是吧，至于能不能像我想的那样去实现就不知道了。不过试一下也无妨，我当会长本来就是觉得这个时候试错成本低，可以放开手去干点事。就算干砸了一些事情，好像也没啥大不了的。如果在我当会长的这一年里面，我可以让自己更有自信，更敢于上台发言，事情没解决时少点焦虑，对社会运行的规则有更深入的理解，就已经算有收获了。</p>
+
+            
+
+
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+        
+            <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/2021/11/06/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94V/"
+                    data-tooltip="大二平日随笔V"
+                    aria-label="PREVIOUS: 大二平日随笔V"
+                >
+                    
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/2021/10/30/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94III/"
+                    data-tooltip="大二平日随笔III"
+                    aria-label="NEXT: 大二平日随笔III"
+                >
+                    
+                        <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a
+                class="post-action-btn btn btn--default btn-open-shareoptions"
+                href="#btn-open-shareoptions"
+                aria-label="Share this post"
+            >
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://example.com/2021/11/05/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94IV/"
+                    title="Share on Facebook"
+                    aria-label="Share on Facebook"
+                >
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://twitter.com/intent/tweet?text=http://example.com/2021/11/05/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94IV/"
+                    title="Share on Twitter"
+                    aria-label="Share on Twitter"
+                >
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://plus.google.com/share?url=http://example.com/2021/11/05/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94IV/"
+                    title="Share on Google+"
+                    aria-label="Share on Google+"
+                >
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Back to top">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+        
+            
+        
+    </div>
+</article>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2022 John Doe. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/2021/11/06/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94V/"
+                    data-tooltip="大二平日随笔V"
+                    aria-label="PREVIOUS: 大二平日随笔V"
+                >
+                    
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/2021/10/30/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94III/"
+                    data-tooltip="大二平日随笔III"
+                    aria-label="NEXT: 大二平日随笔III"
+                >
+                    
+                        <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a
+                class="post-action-btn btn btn--default btn-open-shareoptions"
+                href="#btn-open-shareoptions"
+                aria-label="Share this post"
+            >
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://example.com/2021/11/05/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94IV/"
+                    title="Share on Facebook"
+                    aria-label="Share on Facebook"
+                >
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://twitter.com/intent/tweet?text=http://example.com/2021/11/05/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94IV/"
+                    title="Share on Twitter"
+                    aria-label="Share on Twitter"
+                >
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://plus.google.com/share?url=http://example.com/2021/11/05/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94IV/"
+                    title="Share on Google+"
+                    aria-label="Share on Google+"
+                >
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Back to top">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                
+    <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+        <i id="btn-close-shareoptions" class="fa fa-times"></i>
+        <ul class="share-options">
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://www.facebook.com/sharer/sharer.php?u=http://example.com/2021/11/05/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94IV/"
+                        aria-label="Share on Facebook"
+                    >
+                        <i class="fab fa-facebook" aria-hidden="true"></i><span>Share on Facebook</span>
+                    </a>
+                </li>
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://twitter.com/intent/tweet?text=http://example.com/2021/11/05/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94IV/"
+                        aria-label="Share on Twitter"
+                    >
+                        <i class="fab fa-twitter" aria-hidden="true"></i><span>Share on Twitter</span>
+                    </a>
+                </li>
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://plus.google.com/share?url=http://example.com/2021/11/05/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94IV/"
+                        aria-label="Share on Google+"
+                    >
+                        <i class="fab fa-google-plus" aria-hidden="true"></i><span>Share on Google+</span>
+                    </a>
+                </li>
+            
+        </ul>
+    </div>
+
+
+            
+        </div>
+        
+
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-times"></i>
+        </div>
+        
+            <h4 id="about-card-name">John Doe</h4>
+        
+            <div id="about-card-bio"><p>author.bio</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>author.job</p>
+
+            </div>
+        
+        
+    </div>
+</div>
+
+        
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+        <!--SCRIPTS-->
+
+<script src="/assets/js/jquery.js"></script>
+
+
+<script src="/assets/js/jquery.fancybox.js"></script>
+
+
+<script src="/assets/js/thumbs.js"></script>
+
+
+<script src="/assets/js/tranquilpeak.js"></script>
+
+<!--SCRIPTS END-->
+
+
+    
+
+
+
+
+    </body>
+</html>

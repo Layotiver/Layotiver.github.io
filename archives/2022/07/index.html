@@ -1,9 +1,520 @@
-extends includes/layout.pug
 
-block content
-  include ./includes/mixins/article-sort.pug
-  #archive
-    - const archiveLength = findArchiveLength(fragment_cache)
-    .article-sort-title= _p('page.articles') + ' - ' + archiveLength
-    +articleSort(page.posts)
-    include includes/pagination.pug
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Layotiver">
+    <title>Archives: 2022/7 - Layotiver</title>
+    <meta name="author" content="John Doe">
+    
+    
+    
+    <script type="application/ld+json">{}</script>
+    <meta property="og:type" content="blog">
+<meta property="og:title" content="Layotiver">
+<meta property="og:url" content="http://example.com/archives/2022/07/index.html">
+<meta property="og:site_name" content="Layotiver">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+    
+    
+        
+    
+    
+    
+    
+    
+    <!--STYLES-->
+    
+<link rel="stylesheet" href="/assets/css/all.css">
+
+    
+<link rel="stylesheet" href="/assets/css/jquery.fancybox.css">
+
+    
+<link rel="stylesheet" href="/assets/css/thumbs.css">
+
+    
+<link rel="stylesheet" href="/assets/css/tranquilpeak.css">
+
+    <!--STYLES END-->
+    
+
+    
+
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+
+<header id="header" data-behavior="1">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a
+            class="header-title-link"
+            href="/"
+            aria-label=""
+        >
+            Layotiver
+        </a>
+    </div>
+    
+        
+            <a
+                class="header-right-picture "
+                href="#about"
+                aria-label="Open the link: /#about"
+            >
+        
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+<nav id="sidebar" data-behavior="1">
+    <div class="sidebar-container">
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/"
+                            
+                            rel="noopener"
+                            title="Home"
+                        >
+                        <i class="sidebar-button-icon fa fa-home" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Home</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-categories"
+                            
+                            rel="noopener"
+                            title="Categories"
+                        >
+                        <i class="sidebar-button-icon fa fa-bookmark" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Categories</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-tags"
+                            
+                            rel="noopener"
+                            title="Tags"
+                        >
+                        <i class="sidebar-button-icon fa fa-tags" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Tags</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-archives"
+                            
+                            rel="noopener"
+                            title="Archives"
+                        >
+                        <i class="sidebar-button-icon fa fa-archive" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Archives</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link open-algolia-search"
+                            href="#search"
+                            
+                            rel="noopener"
+                            title="Search"
+                        >
+                        <i class="sidebar-button-icon fa fa-search" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Search</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="#about"
+                            
+                            rel="noopener"
+                            title="About"
+                        >
+                        <i class="sidebar-button-icon fa fa-question" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">About</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://github.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="GitHub"
+                        >
+                        <i class="sidebar-button-icon fab fa-github" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">GitHub</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="http://stackoverflow.com/users"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Stack Overflow"
+                        >
+                        <i class="sidebar-button-icon fab fa-stack-overflow" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Stack Overflow</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://twitter.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Twitter"
+                        >
+                        <i class="sidebar-button-icon fab fa-twitter" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Twitter</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://facebook.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Facebook"
+                        >
+                        <i class="sidebar-button-icon fab fa-facebook" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Facebook</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://plus.google.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Google +"
+                        >
+                        <i class="sidebar-button-icon fab fa-google-plus" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Google +</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://www.linkedin.com/profile/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="LinkedIn"
+                        >
+                        <i class="sidebar-button-icon fab fa-linkedin" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">LinkedIn</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/mailto"
+                            
+                            rel="noopener"
+                            title="Mail"
+                        >
+                        <i class="sidebar-button-icon fa fa-envelope" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Mail</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/atom.xml"
+                            
+                            rel="noopener"
+                            title="RSS"
+                        >
+                        <i class="sidebar-button-icon fa fa-rss" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">RSS</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+            
+            <div id="main" data-behavior="1"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+    <section class="postShorten-group main-content-wrap">
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title">
+                    
+                        <a
+                            class="link-unstyled"
+                            href="/2022/07/03/%E5%AD%A6%E4%B9%A0Linux%E5%91%BD%E4%BB%A4/"
+                            aria-label=": 学习Linux命令"
+                        >
+                            学习Linux命令
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time datetime="2022-07-03T15:49:49+08:00">
+	
+		    Jul 03, 2022
+    	
+    </time>
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content">
+                    <h1 id="长期更新"><a href="#长期更新" class="headerlink" title="长期更新"></a>长期更新</h1><p>由于实验室服务器用的是Linux系统，平时都是用ssh登录管理文件；另外，计算机专业不会Linux那肯定是说不过去的。之前只会一些很基本的linux指令，现在是时候系统地学一遍了。</p>
+<p>计划是按照<a target="_blank" rel="noopener" href="https://blog.csdn.net/AndrewHYang/article/details/86477162">菜鸟教程</a>学，每天学4个，并做好记录。也不求全部掌握吧，对于一些冷门的命令，但至少应该知道这大概是干什么用的。</p>
+<hr>
+<h2 id="2022-7-3"><a href="#2022-7-3" class="headerlink" title="2022.7.3"></a>2022.7.3</h2><h3 id="cat"><a href="#cat" class="headerlink" title="cat"></a>cat</h3><p>cat（英文全拼：concatenate）命令用于连接文件并打印到标准输出设备上。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Layotiver<span class="meta">@VM</span>-<span class="number">12</span>-<span class="number">7</span>-ubuntu:~/LearnLinux$ cat test.txt</span><br><span class="line">qwertyuiop</span><br><span class="line">Layotiver<span class="meta">@VM</span>-<span class="number">12</span>-<span class="number">7</span>-ubuntu:~/LearnLinux$ cat test.txt test.txt test.txt</span><br><span class="line">qwertyuiop</span><br><span class="line">qwertyuiop</span><br><span class="line">qwertyuiop</span><br><span class="line">Layotiver<span class="meta">@VM</span>-<span class="number">12</span>-<span class="number">7</span>-ubuntu:~/LearnLinux$ cat -n test.txt test.txt test.txt</span><br><span class="line">     <span class="number">1</span>  qwertyuiop</span><br><span class="line">     <span class="number">2</span>  qwertyuiop</span><br><span class="line">     <span class="number">3</span>  qwertyuiop</span><br></pre></td></tr></table></figure>
+
+<h3 id="chattr"><a href="#chattr" class="headerlink" title="chattr"></a>chattr</h3><p>chattr命令用于改变文件属性。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Layotiver<span class="meta">@VM</span>-<span class="number">12</span>-<span class="number">7</span>-ubuntu:~/LearnLinux$ lsattr test.txt</span><br><span class="line">--------------e----- test.txt</span><br><span class="line">Layotiver<span class="meta">@VM</span>-<span class="number">12</span>-<span class="number">7</span>-ubuntu:~/LearnLinux$ chattr +a test.txt</span><br><span class="line">chattr: Operation not permitted <span class="keyword">while</span> setting flags on test.txt</span><br><span class="line">Layotiver<span class="meta">@VM</span>-<span class="number">12</span>-<span class="number">7</span>-ubuntu:~/LearnLinux$ chattr +u test.txt</span><br><span class="line">Layotiver<span class="meta">@VM</span>-<span class="number">12</span>-<span class="number">7</span>-ubuntu:~/LearnLinux$ lsattr test.txt</span><br><span class="line">-u------------e----- test.txt</span><br><span class="line">Layotiver<span class="meta">@VM</span>-<span class="number">12</span>-<span class="number">7</span>-ubuntu:~/LearnLinux$ chattr -u test.txt</span><br><span class="line">Layotiver<span class="meta">@VM</span>-<span class="number">12</span>-<span class="number">7</span>-ubuntu:~/LearnLinux$ lsattr test.txt</span><br><span class="line">--------------e----- test.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="chgrp"><a href="#chgrp" class="headerlink" title="chgrp"></a>chgrp</h3><p>chgrp（英文全拼：change group）命令用于变更文件或目录的所属群组。</p>
+<p>但是我不太懂得群组咋分的。</p>
+<h3 id="chmod"><a href="#chmod" class="headerlink" title="chmod"></a>chmod</h3><p>chmod（英文全拼：change mode）命令是控制用户对文件的权限的命令。</p>
+<ul>
+<li>u 表示该文件的拥有者，g 表示与该文件的拥有者属于同一个群体(group)者，o 表示其他以外的人，a 表示这三者皆是。</li>
+<li>+ 表示增加权限、- 表示取消权限、= 表示唯一设定权限。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">Layotiver<span class="meta">@VM</span>-<span class="number">12</span>-<span class="number">7</span>-ubuntu:~/LearnLinux$ ls -l</span><br><span class="line">total <span class="number">4</span></span><br><span class="line">-rw-rw-r-- <span class="number">1</span> Layotiver Layotiver <span class="number">11</span> Jul  <span class="number">3</span> <span class="number">16</span>:<span class="number">03</span> test.txt</span><br><span class="line">Layotiver<span class="meta">@VM</span>-<span class="number">12</span>-<span class="number">7</span>-ubuntu:~/LearnLinux$ chmod o+w test.txt</span><br><span class="line">Layotiver<span class="meta">@VM</span>-<span class="number">12</span>-<span class="number">7</span>-ubuntu:~/LearnLinux$ ls -l</span><br><span class="line">total <span class="number">4</span></span><br><span class="line">-rw-rw-rw- <span class="number">1</span> Layotiver Layotiver <span class="number">11</span> Jul  <span class="number">3</span> <span class="number">16</span>:<span class="number">03</span> test.txt</span><br><span class="line">Layotiver<span class="meta">@VM</span>-<span class="number">12</span>-<span class="number">7</span>-ubuntu:~/LearnLinux$ chmod o=w test.txt</span><br><span class="line">Layotiver<span class="meta">@VM</span>-<span class="number">12</span>-<span class="number">7</span>-ubuntu:~/LearnLinux$ ls -l</span><br><span class="line">total <span class="number">4</span></span><br><span class="line">-rw-rw--w- <span class="number">1</span> Layotiver Layotiver <span class="number">11</span> Jul  <span class="number">3</span> <span class="number">16</span>:<span class="number">03</span> test.txt</span><br><span class="line">Layotiver<span class="meta">@VM</span>-<span class="number">12</span>-<span class="number">7</span>-ubuntu:~/LearnLinux$ chmod o=r test.txt</span><br><span class="line">Layotiver<span class="meta">@VM</span>-<span class="number">12</span>-<span class="number">7</span>-ubuntu:~/LearnLinux$ ls -l</span><br><span class="line">total <span class="number">4</span></span><br><span class="line">-rw-rw-r-- <span class="number">1</span> Layotiver Layotiver <span class="number">11</span> Jul  <span class="number">3</span> <span class="number">16</span>:<span class="number">03</span> test.txt</span><br><span class="line">Layotiver<span class="meta">@VM</span>-<span class="number">12</span>-<span class="number">7</span>-ubuntu:~/LearnLinux$ chmod u+x test.txt</span><br><span class="line">Layotiver<span class="meta">@VM</span>-<span class="number">12</span>-<span class="number">7</span>-ubuntu:~/LearnLinux$ ./test.txt</span><br><span class="line">./test.txt: line <span class="number">1</span>: qwertyuiop: command not found</span><br><span class="line">Layotiver<span class="meta">@VM</span>-<span class="number">12</span>-<span class="number">7</span>-ubuntu:~/LearnLinux$ chmod u-x test.txt</span><br><span class="line">Layotiver<span class="meta">@VM</span>-<span class="number">12</span>-<span class="number">7</span>-ubuntu:~/LearnLinux$ ls -l</span><br><span class="line">total <span class="number">4</span></span><br><span class="line">-rw-rw-r-- <span class="number">1</span> Layotiver Layotiver <span class="number">11</span> Jul  <span class="number">3</span> <span class="number">16</span>:<span class="number">03</span> test.txt</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="2022-7-4"><a href="#2022-7-4" class="headerlink" title="2022.7.4"></a>2022.7.4</h2><h3 id="chown"><a href="#chown" class="headerlink" title="chown"></a>chown</h3><p>chown（英文全拼：change owner）命令用于设置文件所有者和文件关联组的命令。<br>chown 需要 root 的权限才能执行此命令。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ ls</span><br><span class="line">test.txt</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ chown root test.txt</span><br><span class="line">chown: changing ownership of &#x27;test.txt&#x27;: Operation not permitted</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ sudo chown root test.txt</span><br><span class="line">[sudo] password for Layotiver:</span><br><span class="line">Layotiver is not in the sudoers file.  This incident will be reported.</span><br></pre></td></tr></table></figure>
+<p>算了，就这样吧</p>
+<h3 id="cksum"><a href="#cksum" class="headerlink" title="cksum"></a>cksum</h3><p>cksum命令用于检查文件的CRC是否正确。确保文件从一个系统传输到另一个系统的过程中不被损坏。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ cksum test.txt</span><br><span class="line">2663006032 11 test.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="cmp"><a href="#cmp" class="headerlink" title="cmp"></a>cmp</h3><p>cmp 命令用于比较两个文件是否有差异。</p>
+<p>当相互比较的两个文件完全一样时，则该指令不会显示任何信息。若发现有所差异，预设会标示出第一个不同之处的字符和列数编号。若不指定任何文件名称或是所给予的文件名为”-“，则cmp指令会从标准输入设备读取数据。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ cat test.txt &gt; testt.txt</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ cmp test.txt testt.txt</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ echo asdfghjkl &gt; testt.txt</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ cmp test.txt testt.txt</span><br><span class="line">test.txt testt.txt differ: byte 1, line 1</span><br></pre></td></tr></table></figure>
+
+<h3 id="diff"><a href="#diff" class="headerlink" title="diff"></a>diff</h3><p>diff 命令用于比较文件的差异。</p>
+<p>diff 以逐行的方式，比较文本文件的异同处。如果指定要比较目录，则 diff 会比较目录中相同文件名的文件，但不会比较其中子目录。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ diff test.txt testt.txt</span><br><span class="line">1c1</span><br><span class="line">&lt; qwertyuiop</span><br><span class="line">---</span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> asdfghjkl</span></span><br><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ diff test.txt testt.txt -y -W 50</span><br><span class="line">qwertyuiop            | asdfghjkl</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="2022-7-5"><a href="#2022-7-5" class="headerlink" title="2022.7.5"></a>2022.7.5</h2><h3 id="diffstat"><a href="#diffstat" class="headerlink" title="diffstat"></a>diffstat</h3><p>diffstat 命令根据diff的比较结果，显示统计数字。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ diff test.txt testt.txt | diffstat</span><br><span class="line"> unknown |    2 +-</span><br><span class="line"> 1 file changed, 1 insertion(+), 1 deletion(-)</span><br></pre></td></tr></table></figure>
+
+<h3 id="file"><a href="#file" class="headerlink" title="file"></a>file</h3><p>file 命令用于辨识文件类型。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ file test.txt</span><br><span class="line">test.txt: ASCII text</span><br></pre></td></tr></table></figure>
+
+<h3 id="find"><a href="#find" class="headerlink" title="find"></a>find</h3><p>find 命令用来在指定目录下查找文件。任何位于参数之前的字符串都将被视为欲查找的目录名。如果使用该命令时，不设置任何参数，则 find 命令将在当前目录下查找子目录与文件。并且将查找到的子目录和文件全部进行显示。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ find</span><br><span class="line">.</span><br><span class="line">./test.txt</span><br><span class="line">./testt.txt</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ find . -name &quot;*.txt&quot;</span><br><span class="line">./test.txt</span><br><span class="line">./testt.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="git"><a href="#git" class="headerlink" title="git"></a>git</h3><p>git 命令是文字模式下的文件管理员。</p>
+<h2 id="咋感觉怪怪的。"><a href="#咋感觉怪怪的。" class="headerlink" title="咋感觉怪怪的。"></a>咋感觉怪怪的。</h2><h2 id="2022-7-6"><a href="#2022-7-6" class="headerlink" title="2022.7.6"></a>2022.7.6</h2><h3 id="gitview"><a href="#gitview" class="headerlink" title="gitview"></a>gitview</h3><p>gitview 命令用于观看文件的内容，它会同时显示十六进制和ASCII格式的字码。</p>
+<img src="/2022/07/03/%E5%AD%A6%E4%B9%A0Linux%E5%91%BD%E4%BB%A4/1.png" class="" title="看得到吗">
+
+<p>不会用，辣眼睛。</p>
+<h3 id="indent"><a href="#indent" class="headerlink" title="indent"></a>indent</h3><p>indent 命令用于调整C原始代码文件的格式。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ cat ctest.c</span><br><span class="line"><span class="meta">#</span><span class="bash">include&lt;stdio.h&gt;</span></span><br><span class="line"><span class="meta">#</span><span class="bash">include&lt;stdlib.h&gt;</span></span><br><span class="line"></span><br><span class="line">int main ()</span><br><span class="line">&#123;</span><br><span class="line">  printf (&quot;hello world\n&quot;);</span><br><span class="line">  //this is a C file</span><br><span class="line">  return 0;</span><br><span class="line">&#125;</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ indent ctest.c</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ cat ctest.c</span><br><span class="line"><span class="meta">#</span><span class="bash">include&lt;stdio.h&gt;</span></span><br><span class="line"><span class="meta">#</span><span class="bash">include&lt;stdlib.h&gt;</span></span><br><span class="line"></span><br><span class="line">int</span><br><span class="line">main ()</span><br><span class="line">&#123;</span><br><span class="line">  printf (&quot;hello world\n&quot;);</span><br><span class="line">  //this is a C file</span><br><span class="line">  return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>怪怪的。</p>
+<h3 id="cut"><a href="#cut" class="headerlink" title="cut"></a>cut</h3><p>cut 命令用于显示每行从开头算起 num1 到 num2 的文字。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~$ who</span><br><span class="line">ubuntu   :0           2022-05-23 08:53 (:0)</span><br><span class="line">Layotiver pts/0        2022-07-06 10:28 (117.70.170.12)</span><br><span class="line">Layotiver pts/1        2022-07-06 12:34 (117.70.170.12)</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~$ who|cut -b 3</span><br><span class="line">u</span><br><span class="line">y</span><br><span class="line">y</span><br></pre></td></tr></table></figure>
+
+<h3 id="ln"><a href="#ln" class="headerlink" title="ln"></a>ln</h3><p>ln（英文全拼：link files）命令是一个非常重要命令，它的功能是为某一个文件在另外一个位置建立一个同步的链接。</p>
+<p>当我们需要在不同的目录，用到相同的文件时，我们不需要在每一个需要的目录下都放一个必须相同的文件，我们只要在某个固定的目录，放上该文件，然后在 其它的目录下用ln命令链接（link）它就可以，不必重复的占用磁盘空间。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~$ ls</span><br><span class="line">helloworld.txt  LearnLinux  learnvim  LearnVim.txt  test</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~$ cd LearnLinux/</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ ln test.txt ~/lntest.txt</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ cat test.txt</span><br><span class="line">qwertyuiop</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ cat ~/lntest.txt</span><br><span class="line">qwertyuiop</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ echo poiuytrewq &gt;&gt; test.txt</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ cat ~/lntest.txt</span><br><span class="line">qwertyuiop</span><br><span class="line">poiuytrewq</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="2022-7-10"><a href="#2022-7-10" class="headerlink" title="2022.7.10"></a>2022.7.10</h2><p>前两天写大作业去了，今天复更。</p>
+<h3 id="less"><a href="#less" class="headerlink" title="less"></a>less</h3><p>less 可以随意浏览文件，支持翻页和搜索，支持向上翻页和向下翻页。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ less test.txt</span><br></pre></td></tr></table></figure>
+<p>然后就可以查看、编辑文件</p>
+<h3 id="locate"><a href="#locate" class="headerlink" title="locate"></a>locate</h3><p>locate 命令用于查找符合条件的文档，他会去保存文档和目录名称的数据库内，查找合乎范本样式条件的文档或目录。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ locate /etc/sh</span><br><span class="line">/etc/shadow</span><br><span class="line">/etc/shadow-</span><br><span class="line">/etc/shells</span><br><span class="line">/snap/core/13308/etc/shadow</span><br><span class="line">/snap/core/13308/etc/shells</span><br><span class="line">/snap/core/13425/etc/shadow</span><br><span class="line">/snap/core/13425/etc/shells</span><br></pre></td></tr></table></figure>
+<p>感觉是找路径中有某个字段的文件</p>
+<h3 id="lsattr"><a href="#lsattr" class="headerlink" title="lsattr"></a>lsattr</h3><p>lsattr 命令用于显示文件属性。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ lsattr *.txt</span><br><span class="line">--------------e----- testt.txt</span><br><span class="line">--------------e----- test.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="mattrib"><a href="#mattrib" class="headerlink" title="mattrib"></a>mattrib</h3><p>mattrib 命令用来变更或显示MS-DOS文件的属性。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ mattrib a:</span><br><span class="line">Can&#x27;t open /dev/fd0: No such file or directory</span><br><span class="line">Cannot initialize &#x27;A:&#x27;</span><br></pre></td></tr></table></figure>
+<h2 id="不懂啥是MS-DOS文件，不太会用"><a href="#不懂啥是MS-DOS文件，不太会用" class="headerlink" title="不懂啥是MS-DOS文件，不太会用"></a>不懂啥是MS-DOS文件，不太会用</h2><h2 id="2022-7-11"><a href="#2022-7-11" class="headerlink" title="2022.7.11"></a>2022.7.11</h2><h3 id="mc"><a href="#mc" class="headerlink" title="mc"></a>mc</h3><p>mc 命令用于提供一个菜单式的文件管理程序。</p>
+<img src="/2022/07/03/%E5%AD%A6%E4%B9%A0Linux%E5%91%BD%E4%BB%A4/2.png" class="" title="mc的界面">
+
+<p>还挺有意思的</p>
+<h3 id="mdel"><a href="#mdel" class="headerlink" title="mdel"></a>mdel</h3><p>mdel 命令用来删除 MSDOS 格式的档案。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ mdel -h</span><br><span class="line">Mtools version 4.0.24, dated December 9th, 2018</span><br><span class="line">Usage: mdel [-v] msdosfile [msdosfiles...]</span><br></pre></td></tr></table></figure>
+<p>可不敢乱删</p>
+<h3 id="mdir"><a href="#mdir" class="headerlink" title="mdir"></a>mdir</h3><p>mdir 为mtools工具指令，模拟MS-DOS的dir指令，可显示MS-DOS文件系统中的目录内容。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ mdir</span><br><span class="line">Can&#x27;t open /dev/fd0: No such file or directory</span><br><span class="line">Cannot initialize &#x27;A:&#x27;</span><br></pre></td></tr></table></figure>
+<p>看来是不是需要去学一下MSDOS的知识</p>
+<h3 id="mktemp"><a href="#mktemp" class="headerlink" title="mktemp"></a>mktemp</h3><p>mktemp 建立的一个暂存文件，供shell script使用。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ mktemp</span><br><span class="line">/tmp/tmp.41OvGSRWJn</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ cat /tmp/tmp.41OvGSRWJn</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ echo &quot;this is a temp file&quot; &gt; /tmp/tmp.41OvGSRWJn</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ cat /tmp/tmp.41OvGSRWJn</span><br><span class="line">this is a temp file</span><br></pre></td></tr></table></figure>
+                    
+                        
+
+
+                    
+                    
+                        <p>
+                            <a
+                                href="/2022/07/03/%E5%AD%A6%E4%B9%A0Linux%E5%91%BD%E4%BB%A4/#post-footer"
+                                class="postShorten-excerpt_link link"
+                                aria-label=""
+                            >
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    <div class="pagination-bar">
+    <ul class="pagination">
+        
+        
+        <li class="pagination-number">page 1 of 1</li>
+    </ul>
+</div>
+
+</section>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2022 John Doe. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+        </div>
+        
+
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-times"></i>
+        </div>
+        
+            <h4 id="about-card-name">John Doe</h4>
+        
+            <div id="about-card-bio"><p>author.bio</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>author.job</p>
+
+            </div>
+        
+        
+    </div>
+</div>
+
+        
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+        <!--SCRIPTS-->
+
+<script src="/assets/js/jquery.js"></script>
+
+
+<script src="/assets/js/jquery.fancybox.js"></script>
+
+
+<script src="/assets/js/thumbs.js"></script>
+
+
+<script src="/assets/js/tranquilpeak.js"></script>
+
+<!--SCRIPTS END-->
+
+
+
+
+
+    </body>
+</html>

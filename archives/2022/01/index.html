@@ -1,9 +1,573 @@
-extends includes/layout.pug
 
-block content
-  include ./includes/mixins/article-sort.pug
-  #archive
-    - const archiveLength = findArchiveLength(fragment_cache)
-    .article-sort-title= _p('page.articles') + ' - ' + archiveLength
-    +articleSort(page.posts)
-    include includes/pagination.pug
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Layotiver">
+    <title>Archives: 2022/1 - Layotiver</title>
+    <meta name="author" content="John Doe">
+    
+    
+    
+    <script type="application/ld+json">{}</script>
+    <meta property="og:type" content="blog">
+<meta property="og:title" content="Layotiver">
+<meta property="og:url" content="http://example.com/archives/2022/01/index.html">
+<meta property="og:site_name" content="Layotiver">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+    
+    
+        
+    
+    
+    
+    
+    
+    <!--STYLES-->
+    
+<link rel="stylesheet" href="/assets/css/all.css">
+
+    
+<link rel="stylesheet" href="/assets/css/jquery.fancybox.css">
+
+    
+<link rel="stylesheet" href="/assets/css/thumbs.css">
+
+    
+<link rel="stylesheet" href="/assets/css/tranquilpeak.css">
+
+    <!--STYLES END-->
+    
+
+    
+
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+
+<header id="header" data-behavior="1">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a
+            class="header-title-link"
+            href="/"
+            aria-label=""
+        >
+            Layotiver
+        </a>
+    </div>
+    
+        
+            <a
+                class="header-right-picture "
+                href="#about"
+                aria-label="Open the link: /#about"
+            >
+        
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+<nav id="sidebar" data-behavior="1">
+    <div class="sidebar-container">
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/"
+                            
+                            rel="noopener"
+                            title="Home"
+                        >
+                        <i class="sidebar-button-icon fa fa-home" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Home</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-categories"
+                            
+                            rel="noopener"
+                            title="Categories"
+                        >
+                        <i class="sidebar-button-icon fa fa-bookmark" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Categories</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-tags"
+                            
+                            rel="noopener"
+                            title="Tags"
+                        >
+                        <i class="sidebar-button-icon fa fa-tags" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Tags</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-archives"
+                            
+                            rel="noopener"
+                            title="Archives"
+                        >
+                        <i class="sidebar-button-icon fa fa-archive" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Archives</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link open-algolia-search"
+                            href="#search"
+                            
+                            rel="noopener"
+                            title="Search"
+                        >
+                        <i class="sidebar-button-icon fa fa-search" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Search</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="#about"
+                            
+                            rel="noopener"
+                            title="About"
+                        >
+                        <i class="sidebar-button-icon fa fa-question" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">About</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://github.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="GitHub"
+                        >
+                        <i class="sidebar-button-icon fab fa-github" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">GitHub</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="http://stackoverflow.com/users"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Stack Overflow"
+                        >
+                        <i class="sidebar-button-icon fab fa-stack-overflow" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Stack Overflow</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://twitter.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Twitter"
+                        >
+                        <i class="sidebar-button-icon fab fa-twitter" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Twitter</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://facebook.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Facebook"
+                        >
+                        <i class="sidebar-button-icon fab fa-facebook" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Facebook</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://plus.google.com/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="Google +"
+                        >
+                        <i class="sidebar-button-icon fab fa-google-plus" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Google +</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="https://www.linkedin.com/profile/"
+                            
+                                target="_blank"
+                            
+                            rel="noopener"
+                            title="LinkedIn"
+                        >
+                        <i class="sidebar-button-icon fab fa-linkedin" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">LinkedIn</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/mailto"
+                            
+                            rel="noopener"
+                            title="Mail"
+                        >
+                        <i class="sidebar-button-icon fa fa-envelope" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Mail</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a
+                            class="sidebar-button-link "
+                            href="/atom.xml"
+                            
+                            rel="noopener"
+                            title="RSS"
+                        >
+                        <i class="sidebar-button-icon fa fa-rss" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">RSS</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+            
+            <div id="main" data-behavior="1"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+    <section class="postShorten-group main-content-wrap">
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title">
+                    
+                        <a
+                            class="link-unstyled"
+                            href="/2022/01/27/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XV/"
+                            aria-label=": 大二平日随笔XV"
+                        >
+                            大二平日随笔XV
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time datetime="2022-01-27T11:18:06+08:00">
+	
+		    Jan 27, 2022
+    	
+    </time>
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content">
+                    <h1 id="月薪7000刀？"><a href="#月薪7000刀？" class="headerlink" title="月薪7000刀？"></a>月薪7000刀？</h1><p>寒假回家这几天为了打发时间，看完了b站的一部番，《樱花任务》。讲一个振兴日本乡村的故事，还有一些对大都市和乡村之间选择的思考，看看可以图一乐。</p>
+<img src="/2022/01/27/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XV/1.png" class="">
+<p>说正经的</p>
+<p>前一段时间听说才子服装店老板娘女儿去美国读研，已经签了实习的公司，月薪7000美金。香港中文大学读的本科，应该是属于那种靠花钱上的学校。这样一来，我有点心动了，毕竟这个钱给的实在太多了。而且国外貌似不用像国内这样996，然后房价还巨高。</p>
+<p>不过话说回来，这也挺异想天开了，毕竟之前一点也没有想过出国留学，现在就连出国留学需要做哪些准备，要考哪些东西，以及要报哪些辅导班都还不太清楚。</p>
+<p>眼下需要做的还是让自己更理想一点，然后可以了解一下这方面的内容，提高一下英语什么的吧。</p>
+<p>我还有很多方面需要完善，我得果断一点。</p>
+
+                    
+                        
+
+
+                    
+                    
+                        <p>
+                            <a
+                                href="/2022/01/27/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XV/#post-footer"
+                                class="postShorten-excerpt_link link"
+                                aria-label=""
+                            >
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title">
+                    
+                        <a
+                            class="link-unstyled"
+                            href="/2022/01/24/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XIV/"
+                            aria-label=": 大二平日随笔XIV"
+                        >
+                            大二平日随笔XIV
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time datetime="2022-01-24T21:18:09+08:00">
+	
+		    Jan 24, 2022
+    	
+    </time>
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content">
+                    <h1 id="不知不觉回家一周了"><a href="#不知不觉回家一周了" class="headerlink" title="不知不觉回家一周了"></a>不知不觉回家一周了</h1><p>三个室友里有两个13号就考完的，还有一个是15号下午考完，我最惨，考到16号晚上。好像是14号的时候，我就开始畅想期末考完后的滋润生活了。当时是这么想的，17号回家动车上五个小时可以把ICS加分实验，甚至连同实验报告都给做了。下午4点下动车，晚餐就可以喝上家里的汤了。然后就可以开始逛街，买过年衣服，学自己感兴趣的东西，约约打羽毛球，跟充满压力的考试时候比起来，这样的日子相当舒服。</p>
+<p>今天打开手机日历一看，居然已经回家一周了，感觉假期生活也有点乏味起来。</p>
+<p>这些天先是看了《网络是怎样连接的》，看到第三章，感觉概念太多了。之前在动车站等候检票的时候，打电话给教务处老师，说明了脚本抢课账号被封的情况，结果那个时候他们才开始讨论对于这种情况要怎么处理。不久后就给我解封了。解封之后我当然是不甘心，又花了一天学了点HTML和JavaScript，写了个新脚本挂上捡漏，可惜的是，到现在都还没有捡到。</p>
+<img src="/2022/01/24/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XIV/1.png" class="" title="看得到吗">
+
+<p>期间还打了一次羽毛球，竟然还是打不过那些大叔，之后肌肉酸痛了两三天。</p>
+<p>放假前就想着今年过年想穿战壕风衣，昨天终于把一整套过年衣服买好了。本来想买卡其色的风衣，结果要年后才有货没办法只能换成藏青色。所以想要搭配一条卡其色的裤子，结果找了好几家店都没有找到，感觉冬天的裤子大多都是深色系的。</p>
+<img src="/2022/01/24/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XIV/2.jpg" class="" title="看得到吗">
+
+<p>其实昨晚本来打算去厦门玩两天的，但是我发现自己其实没什么兴趣。我总有一种受到敦促的感觉，我知道自己还没得到那种境界，所以眼下的很多娱乐都变得索然无味。</p>
+<p>另外，这个世上还存在许多未知等待我去探索。我究竟身处于一个怎样的社会？怎样的国家？权利运作的原理是什么？996和内卷是如何产生的？看到白岩松建议推行“自愿”延时退休的视频，我感受到了一丝魔幻。</p>
+
+                    
+                        
+
+
+                    
+                    
+                        <p>
+                            <a
+                                href="/2022/01/24/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XIV/#post-footer"
+                                class="postShorten-excerpt_link link"
+                                aria-label=""
+                            >
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title">
+                    
+                        <a
+                            class="link-unstyled"
+                            href="/2022/01/16/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XIII/"
+                            aria-label=": 大二平日随笔XIII"
+                        >
+                            大二平日随笔XIII
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time datetime="2022-01-16T22:00:22+08:00">
+	
+		    Jan 16, 2022
+    	
+    </time>
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content">
+                    <h1 id="寒假开始了"><a href="#寒假开始了" class="headerlink" title="寒假开始了"></a>寒假开始了</h1><p>今天晚上考完了最后一门图论，大二上的期末考，终于结束了。明天就回家了，10点上车，下午3点到家，然后就可以开始吃吃喝喝，买新衣服了。</p>
+<img src="/2022/01/16/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XIII/1.png" class="">
+
+<p>大二上学期就这么结束了，想来还是有些遗憾，自己没有成为心中理想的样子。不过这一整个学期经历过来，思想上的收获还是有的。</p>
+<p>前两天看到了那个北京朝阳区实验小学老师辱骂学生的事，实在是让我有点触目惊心。那两个老师的语气，还有其他学生的起哄，这他妈谁顶的住。难道这就是所谓的更好的教育资源吗？我一向排斥北上广深这些房价巨高的地方，感觉过去就是给资本家打工。掏光积蓄，付个首付，再背上几十年的房贷，最大也只能买个七八十平的房子。有人说北上广深的教育资源是其它任何地方都比不上的，仔细想想，这本末倒置了。人们总是容易忽视人本身的重要性，而追求过多外在的东西。与其进这一所所谓的教育资源丰富的学校，然后低声下气，甚至对于老师都有过分的崇拜，在我看来，还不如像我一样。读个县城的小学，中学，通过农村专项混个985读一读。或许北京的学校出的人才更多，甚至有可能视频里那个趾高气扬的老师对教学颇有经验，指导出了很多优秀的学生，但是对于学生本人来说，最后在学业上成功与否，很大程度上取决于他是否从学习中获得了足够的乐趣。引导孩子对知识的兴趣，对世界的独立思考，这很大程度上是为人父母应该做的，而不是一股劲想要挤进大城市，追求所谓的教育资源，用尽一生还房贷，996给资本家打工。</p>
+<p>现在已经是2022年了。今年5，6月份又要进行社团换届了，我也将把羽协传给下一任会长。下学期只有16周，考完之后就要搬宿舍。709里，我读计算机，其他三人一工一管一人文，换宿舍之后，可以说是各奔东西了。现在想想，就已经有点舍不得了。我们宿舍都是通过高考的优惠政策进来的，我和另外两个一样，是农村专项降本一进来，还有一个是国家专项进来的。大家都不是啥大富大贵人家，四个人里面可能我花钱是最不含糊的。我们相处的也挺融洽的，大家都挺淳朴的，很多事情都可以相互包容。应该说，在科大里确实是没见过知乎上说的那些拉帮结派，官僚主义。ljc这人不错，很多地方值得我学习。一方面吧，他学习能力是有的，还挺强。更重要的是，很多事情，他放的下，活的比较快乐，每天晚上都睡得挺好。在这一点上，我就逊色多了。这学期我是最晚考完的，现在宿舍就只剩我一个人。</p>
+<img src="/2022/01/16/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XIII/3.jpg" class="">
+
+<p>这个寒假，我还是想学点东西的。或许其实学多少东西不重要。重要的是，我能达到那种在学习中感受到快乐的状态。眼下还是有很多东西可以学的。前两天因为用脚本刷课，被封号了，到现在都还没给我解开。</p>
+<img src="/2022/01/16/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XIII/2.png" class="">
+<img src="/2022/01/16/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XIII/4.jpg" class="">
+<p>这不得回去学一学网页前端，计算机网络还有JavaScript的相关知识，写一个更强的脚本出来。希望能够度过一个充实的寒假吧。</p>
+
+                    
+                        
+
+
+                    
+                    
+                        <p>
+                            <a
+                                href="/2022/01/16/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XIII/#post-footer"
+                                class="postShorten-excerpt_link link"
+                                aria-label=""
+                            >
+                                Comment and share
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    <div class="pagination-bar">
+    <ul class="pagination">
+        
+        
+        <li class="pagination-number">page 1 of 1</li>
+    </ul>
+</div>
+
+</section>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2022 John Doe. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+        </div>
+        
+
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-times"></i>
+        </div>
+        
+            <h4 id="about-card-name">John Doe</h4>
+        
+            <div id="about-card-bio"><p>author.bio</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>author.job</p>
+
+            </div>
+        
+        
+    </div>
+</div>
+
+        
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+        <!--SCRIPTS-->
+
+<script src="/assets/js/jquery.js"></script>
+
+
+<script src="/assets/js/jquery.fancybox.js"></script>
+
+
+<script src="/assets/js/thumbs.js"></script>
+
+
+<script src="/assets/js/tranquilpeak.js"></script>
+
+<!--SCRIPTS END-->
+
+
+
+
+
+    </body>
+</html>
