@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Layotiver</title>
+  
+  
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2021-10-24T07:18:14.000Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>John Doe</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://example.com/2022/11/08/hello-world/"/>
+    <id>http://example.com/2022/11/08/hello-world/</id>
+    <published>2022-11-08T11:55:40.125Z</published>
+    <updated>2021-10-24T07:18:14.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>学习Linux命令</title>
+    <link href="http://example.com/2022/07/03/%E5%AD%A6%E4%B9%A0Linux%E5%91%BD%E4%BB%A4/"/>
+    <id>http://example.com/2022/07/03/%E5%AD%A6%E4%B9%A0Linux%E5%91%BD%E4%BB%A4/</id>
+    <published>2022-07-03T07:49:49.000Z</published>
+    <updated>2022-07-11T11:05:26.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="长期更新"><a href="#长期更新" class="headerlink" title="长期更新"></a>长期更新</h1><p>由于实验室服务器用的是Linux系统，平时都是用ssh登录管理文件；另外，计算机专业不会Linux那肯定是说不过去的。之前只会一些很基本的linux指令，现在是时候系统地学一遍了。</p><p>计划是按照<a href="https://blog.csdn.net/AndrewHYang/article/details/86477162">菜鸟教程</a>学，每天学4个，并做好记录。也不求全部掌握吧，对于一些冷门的命令，但至少应该知道这大概是干什么用的。</p><hr><h2 id="2022-7-3"><a href="#2022-7-3" class="headerlink" title="2022.7.3"></a>2022.7.3</h2><h3 id="cat"><a href="#cat" class="headerlink" title="cat"></a>cat</h3><p>cat（英文全拼：concatenate）命令用于连接文件并打印到标准输出设备上。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Layotiver<span class="meta">@VM</span>-<span class="number">12</span>-<span class="number">7</span>-ubuntu:~/LearnLinux$ cat test.txt</span><br><span class="line">qwertyuiop</span><br><span class="line">Layotiver<span class="meta">@VM</span>-<span class="number">12</span>-<span class="number">7</span>-ubuntu:~/LearnLinux$ cat test.txt test.txt test.txt</span><br><span class="line">qwertyuiop</span><br><span class="line">qwertyuiop</span><br><span class="line">qwertyuiop</span><br><span class="line">Layotiver<span class="meta">@VM</span>-<span class="number">12</span>-<span class="number">7</span>-ubuntu:~/LearnLinux$ cat -n test.txt test.txt test.txt</span><br><span class="line">     <span class="number">1</span>  qwertyuiop</span><br><span class="line">     <span class="number">2</span>  qwertyuiop</span><br><span class="line">     <span class="number">3</span>  qwertyuiop</span><br></pre></td></tr></table></figure><h3 id="chattr"><a href="#chattr" class="headerlink" title="chattr"></a>chattr</h3><p>chattr命令用于改变文件属性。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Layotiver<span class="meta">@VM</span>-<span class="number">12</span>-<span class="number">7</span>-ubuntu:~/LearnLinux$ lsattr test.txt</span><br><span class="line">--------------e----- test.txt</span><br><span class="line">Layotiver<span class="meta">@VM</span>-<span class="number">12</span>-<span class="number">7</span>-ubuntu:~/LearnLinux$ chattr +a test.txt</span><br><span class="line">chattr: Operation not permitted <span class="keyword">while</span> setting flags on test.txt</span><br><span class="line">Layotiver<span class="meta">@VM</span>-<span class="number">12</span>-<span class="number">7</span>-ubuntu:~/LearnLinux$ chattr +u test.txt</span><br><span class="line">Layotiver<span class="meta">@VM</span>-<span class="number">12</span>-<span class="number">7</span>-ubuntu:~/LearnLinux$ lsattr test.txt</span><br><span class="line">-u------------e----- test.txt</span><br><span class="line">Layotiver<span class="meta">@VM</span>-<span class="number">12</span>-<span class="number">7</span>-ubuntu:~/LearnLinux$ chattr -u test.txt</span><br><span class="line">Layotiver<span class="meta">@VM</span>-<span class="number">12</span>-<span class="number">7</span>-ubuntu:~/LearnLinux$ lsattr test.txt</span><br><span class="line">--------------e----- test.txt</span><br></pre></td></tr></table></figure><h3 id="chgrp"><a href="#chgrp" class="headerlink" title="chgrp"></a>chgrp</h3><p>chgrp（英文全拼：change group）命令用于变更文件或目录的所属群组。</p><p>但是我不太懂得群组咋分的。</p><h3 id="chmod"><a href="#chmod" class="headerlink" title="chmod"></a>chmod</h3><p>chmod（英文全拼：change mode）命令是控制用户对文件的权限的命令。</p><ul><li>u 表示该文件的拥有者，g 表示与该文件的拥有者属于同一个群体(group)者，o 表示其他以外的人，a 表示这三者皆是。</li><li>+ 表示增加权限、- 表示取消权限、= 表示唯一设定权限。</li></ul><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">Layotiver<span class="meta">@VM</span>-<span class="number">12</span>-<span class="number">7</span>-ubuntu:~/LearnLinux$ ls -l</span><br><span class="line">total <span class="number">4</span></span><br><span class="line">-rw-rw-r-- <span class="number">1</span> Layotiver Layotiver <span class="number">11</span> Jul  <span class="number">3</span> <span class="number">16</span>:<span class="number">03</span> test.txt</span><br><span class="line">Layotiver<span class="meta">@VM</span>-<span class="number">12</span>-<span class="number">7</span>-ubuntu:~/LearnLinux$ chmod o+w test.txt</span><br><span class="line">Layotiver<span class="meta">@VM</span>-<span class="number">12</span>-<span class="number">7</span>-ubuntu:~/LearnLinux$ ls -l</span><br><span class="line">total <span class="number">4</span></span><br><span class="line">-rw-rw-rw- <span class="number">1</span> Layotiver Layotiver <span class="number">11</span> Jul  <span class="number">3</span> <span class="number">16</span>:<span class="number">03</span> test.txt</span><br><span class="line">Layotiver<span class="meta">@VM</span>-<span class="number">12</span>-<span class="number">7</span>-ubuntu:~/LearnLinux$ chmod o=w test.txt</span><br><span class="line">Layotiver<span class="meta">@VM</span>-<span class="number">12</span>-<span class="number">7</span>-ubuntu:~/LearnLinux$ ls -l</span><br><span class="line">total <span class="number">4</span></span><br><span class="line">-rw-rw--w- <span class="number">1</span> Layotiver Layotiver <span class="number">11</span> Jul  <span class="number">3</span> <span class="number">16</span>:<span class="number">03</span> test.txt</span><br><span class="line">Layotiver<span class="meta">@VM</span>-<span class="number">12</span>-<span class="number">7</span>-ubuntu:~/LearnLinux$ chmod o=r test.txt</span><br><span class="line">Layotiver<span class="meta">@VM</span>-<span class="number">12</span>-<span class="number">7</span>-ubuntu:~/LearnLinux$ ls -l</span><br><span class="line">total <span class="number">4</span></span><br><span class="line">-rw-rw-r-- <span class="number">1</span> Layotiver Layotiver <span class="number">11</span> Jul  <span class="number">3</span> <span class="number">16</span>:<span class="number">03</span> test.txt</span><br><span class="line">Layotiver<span class="meta">@VM</span>-<span class="number">12</span>-<span class="number">7</span>-ubuntu:~/LearnLinux$ chmod u+x test.txt</span><br><span class="line">Layotiver<span class="meta">@VM</span>-<span class="number">12</span>-<span class="number">7</span>-ubuntu:~/LearnLinux$ ./test.txt</span><br><span class="line">./test.txt: line <span class="number">1</span>: qwertyuiop: command not found</span><br><span class="line">Layotiver<span class="meta">@VM</span>-<span class="number">12</span>-<span class="number">7</span>-ubuntu:~/LearnLinux$ chmod u-x test.txt</span><br><span class="line">Layotiver<span class="meta">@VM</span>-<span class="number">12</span>-<span class="number">7</span>-ubuntu:~/LearnLinux$ ls -l</span><br><span class="line">total <span class="number">4</span></span><br><span class="line">-rw-rw-r-- <span class="number">1</span> Layotiver Layotiver <span class="number">11</span> Jul  <span class="number">3</span> <span class="number">16</span>:<span class="number">03</span> test.txt</span><br></pre></td></tr></table></figure><hr><h2 id="2022-7-4"><a href="#2022-7-4" class="headerlink" title="2022.7.4"></a>2022.7.4</h2><h3 id="chown"><a href="#chown" class="headerlink" title="chown"></a>chown</h3><p>chown（英文全拼：change owner）命令用于设置文件所有者和文件关联组的命令。<br>chown 需要 root 的权限才能执行此命令。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ ls</span><br><span class="line">test.txt</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ chown root test.txt</span><br><span class="line">chown: changing ownership of &#x27;test.txt&#x27;: Operation not permitted</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ sudo chown root test.txt</span><br><span class="line">[sudo] password for Layotiver:</span><br><span class="line">Layotiver is not in the sudoers file.  This incident will be reported.</span><br></pre></td></tr></table></figure><p>算了，就这样吧</p><h3 id="cksum"><a href="#cksum" class="headerlink" title="cksum"></a>cksum</h3><p>cksum命令用于检查文件的CRC是否正确。确保文件从一个系统传输到另一个系统的过程中不被损坏。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ cksum test.txt</span><br><span class="line">2663006032 11 test.txt</span><br></pre></td></tr></table></figure><h3 id="cmp"><a href="#cmp" class="headerlink" title="cmp"></a>cmp</h3><p>cmp 命令用于比较两个文件是否有差异。</p><p>当相互比较的两个文件完全一样时，则该指令不会显示任何信息。若发现有所差异，预设会标示出第一个不同之处的字符和列数编号。若不指定任何文件名称或是所给予的文件名为”-“，则cmp指令会从标准输入设备读取数据。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ cat test.txt &gt; testt.txt</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ cmp test.txt testt.txt</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ echo asdfghjkl &gt; testt.txt</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ cmp test.txt testt.txt</span><br><span class="line">test.txt testt.txt differ: byte 1, line 1</span><br></pre></td></tr></table></figure><h3 id="diff"><a href="#diff" class="headerlink" title="diff"></a>diff</h3><p>diff 命令用于比较文件的差异。</p><p>diff 以逐行的方式，比较文本文件的异同处。如果指定要比较目录，则 diff 会比较目录中相同文件名的文件，但不会比较其中子目录。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ diff test.txt testt.txt</span><br><span class="line">1c1</span><br><span class="line">&lt; qwertyuiop</span><br><span class="line">---</span><br><span class="line"><span class="meta">&gt;</span><span class="bash"> asdfghjkl</span></span><br><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ diff test.txt testt.txt -y -W 50</span><br><span class="line">qwertyuiop            | asdfghjkl</span><br></pre></td></tr></table></figure><hr><h2 id="2022-7-5"><a href="#2022-7-5" class="headerlink" title="2022.7.5"></a>2022.7.5</h2><h3 id="diffstat"><a href="#diffstat" class="headerlink" title="diffstat"></a>diffstat</h3><p>diffstat 命令根据diff的比较结果，显示统计数字。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ diff test.txt testt.txt | diffstat</span><br><span class="line"> unknown |    2 +-</span><br><span class="line"> 1 file changed, 1 insertion(+), 1 deletion(-)</span><br></pre></td></tr></table></figure><h3 id="file"><a href="#file" class="headerlink" title="file"></a>file</h3><p>file 命令用于辨识文件类型。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ file test.txt</span><br><span class="line">test.txt: ASCII text</span><br></pre></td></tr></table></figure><h3 id="find"><a href="#find" class="headerlink" title="find"></a>find</h3><p>find 命令用来在指定目录下查找文件。任何位于参数之前的字符串都将被视为欲查找的目录名。如果使用该命令时，不设置任何参数，则 find 命令将在当前目录下查找子目录与文件。并且将查找到的子目录和文件全部进行显示。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ find</span><br><span class="line">.</span><br><span class="line">./test.txt</span><br><span class="line">./testt.txt</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ find . -name &quot;*.txt&quot;</span><br><span class="line">./test.txt</span><br><span class="line">./testt.txt</span><br></pre></td></tr></table></figure><h3 id="git"><a href="#git" class="headerlink" title="git"></a>git</h3><p>git 命令是文字模式下的文件管理员。</p><h2 id="咋感觉怪怪的。"><a href="#咋感觉怪怪的。" class="headerlink" title="咋感觉怪怪的。"></a>咋感觉怪怪的。</h2><h2 id="2022-7-6"><a href="#2022-7-6" class="headerlink" title="2022.7.6"></a>2022.7.6</h2><h3 id="gitview"><a href="#gitview" class="headerlink" title="gitview"></a>gitview</h3><p>gitview 命令用于观看文件的内容，它会同时显示十六进制和ASCII格式的字码。</p><img src="/2022/07/03/%E5%AD%A6%E4%B9%A0Linux%E5%91%BD%E4%BB%A4/1.png" class="" title="看得到吗"><p>不会用，辣眼睛。</p><h3 id="indent"><a href="#indent" class="headerlink" title="indent"></a>indent</h3><p>indent 命令用于调整C原始代码文件的格式。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ cat ctest.c</span><br><span class="line"><span class="meta">#</span><span class="bash">include&lt;stdio.h&gt;</span></span><br><span class="line"><span class="meta">#</span><span class="bash">include&lt;stdlib.h&gt;</span></span><br><span class="line"></span><br><span class="line">int main ()</span><br><span class="line">&#123;</span><br><span class="line">  printf (&quot;hello world\n&quot;);</span><br><span class="line">  //this is a C file</span><br><span class="line">  return 0;</span><br><span class="line">&#125;</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ indent ctest.c</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ cat ctest.c</span><br><span class="line"><span class="meta">#</span><span class="bash">include&lt;stdio.h&gt;</span></span><br><span class="line"><span class="meta">#</span><span class="bash">include&lt;stdlib.h&gt;</span></span><br><span class="line"></span><br><span class="line">int</span><br><span class="line">main ()</span><br><span class="line">&#123;</span><br><span class="line">  printf (&quot;hello world\n&quot;);</span><br><span class="line">  //this is a C file</span><br><span class="line">  return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>怪怪的。</p><h3 id="cut"><a href="#cut" class="headerlink" title="cut"></a>cut</h3><p>cut 命令用于显示每行从开头算起 num1 到 num2 的文字。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~$ who</span><br><span class="line">ubuntu   :0           2022-05-23 08:53 (:0)</span><br><span class="line">Layotiver pts/0        2022-07-06 10:28 (117.70.170.12)</span><br><span class="line">Layotiver pts/1        2022-07-06 12:34 (117.70.170.12)</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~$ who|cut -b 3</span><br><span class="line">u</span><br><span class="line">y</span><br><span class="line">y</span><br></pre></td></tr></table></figure><h3 id="ln"><a href="#ln" class="headerlink" title="ln"></a>ln</h3><p>ln（英文全拼：link files）命令是一个非常重要命令，它的功能是为某一个文件在另外一个位置建立一个同步的链接。</p><p>当我们需要在不同的目录，用到相同的文件时，我们不需要在每一个需要的目录下都放一个必须相同的文件，我们只要在某个固定的目录，放上该文件，然后在 其它的目录下用ln命令链接（link）它就可以，不必重复的占用磁盘空间。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~$ ls</span><br><span class="line">helloworld.txt  LearnLinux  learnvim  LearnVim.txt  test</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~$ cd LearnLinux/</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ ln test.txt ~/lntest.txt</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ cat test.txt</span><br><span class="line">qwertyuiop</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ cat ~/lntest.txt</span><br><span class="line">qwertyuiop</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ echo poiuytrewq &gt;&gt; test.txt</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ cat ~/lntest.txt</span><br><span class="line">qwertyuiop</span><br><span class="line">poiuytrewq</span><br></pre></td></tr></table></figure><hr><h2 id="2022-7-10"><a href="#2022-7-10" class="headerlink" title="2022.7.10"></a>2022.7.10</h2><p>前两天写大作业去了，今天复更。</p><h3 id="less"><a href="#less" class="headerlink" title="less"></a>less</h3><p>less 可以随意浏览文件，支持翻页和搜索，支持向上翻页和向下翻页。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ less test.txt</span><br></pre></td></tr></table></figure><p>然后就可以查看、编辑文件</p><h3 id="locate"><a href="#locate" class="headerlink" title="locate"></a>locate</h3><p>locate 命令用于查找符合条件的文档，他会去保存文档和目录名称的数据库内，查找合乎范本样式条件的文档或目录。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ locate /etc/sh</span><br><span class="line">/etc/shadow</span><br><span class="line">/etc/shadow-</span><br><span class="line">/etc/shells</span><br><span class="line">/snap/core/13308/etc/shadow</span><br><span class="line">/snap/core/13308/etc/shells</span><br><span class="line">/snap/core/13425/etc/shadow</span><br><span class="line">/snap/core/13425/etc/shells</span><br></pre></td></tr></table></figure><p>感觉是找路径中有某个字段的文件</p><h3 id="lsattr"><a href="#lsattr" class="headerlink" title="lsattr"></a>lsattr</h3><p>lsattr 命令用于显示文件属性。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ lsattr *.txt</span><br><span class="line">--------------e----- testt.txt</span><br><span class="line">--------------e----- test.txt</span><br></pre></td></tr></table></figure><h3 id="mattrib"><a href="#mattrib" class="headerlink" title="mattrib"></a>mattrib</h3><p>mattrib 命令用来变更或显示MS-DOS文件的属性。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ mattrib a:</span><br><span class="line">Can&#x27;t open /dev/fd0: No such file or directory</span><br><span class="line">Cannot initialize &#x27;A:&#x27;</span><br></pre></td></tr></table></figure><h2 id="不懂啥是MS-DOS文件，不太会用"><a href="#不懂啥是MS-DOS文件，不太会用" class="headerlink" title="不懂啥是MS-DOS文件，不太会用"></a>不懂啥是MS-DOS文件，不太会用</h2><h2 id="2022-7-11"><a href="#2022-7-11" class="headerlink" title="2022.7.11"></a>2022.7.11</h2><h3 id="mc"><a href="#mc" class="headerlink" title="mc"></a>mc</h3><p>mc 命令用于提供一个菜单式的文件管理程序。</p><img src="/2022/07/03/%E5%AD%A6%E4%B9%A0Linux%E5%91%BD%E4%BB%A4/2.png" class="" title="mc的界面"><p>还挺有意思的</p><h3 id="mdel"><a href="#mdel" class="headerlink" title="mdel"></a>mdel</h3><p>mdel 命令用来删除 MSDOS 格式的档案。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ mdel -h</span><br><span class="line">Mtools version 4.0.24, dated December 9th, 2018</span><br><span class="line">Usage: mdel [-v] msdosfile [msdosfiles...]</span><br></pre></td></tr></table></figure><p>可不敢乱删</p><h3 id="mdir"><a href="#mdir" class="headerlink" title="mdir"></a>mdir</h3><p>mdir 为mtools工具指令，模拟MS-DOS的dir指令，可显示MS-DOS文件系统中的目录内容。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ mdir</span><br><span class="line">Can&#x27;t open /dev/fd0: No such file or directory</span><br><span class="line">Cannot initialize &#x27;A:&#x27;</span><br></pre></td></tr></table></figure><p>看来是不是需要去学一下MSDOS的知识</p><h3 id="mktemp"><a href="#mktemp" class="headerlink" title="mktemp"></a>mktemp</h3><p>mktemp 建立的一个暂存文件，供shell script使用。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ mktemp</span><br><span class="line">/tmp/tmp.41OvGSRWJn</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ cat /tmp/tmp.41OvGSRWJn</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ echo &quot;this is a temp file&quot; &gt; /tmp/tmp.41OvGSRWJn</span><br><span class="line">Layotiver@VM-12-7-ubuntu:~/LearnLinux$ cat /tmp/tmp.41OvGSRWJn</span><br><span class="line">this is a temp file</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;长期更新&quot;&gt;&lt;a href=&quot;#长期更新&quot; class=&quot;headerlink&quot; title=&quot;长期更新&quot;&gt;&lt;/a&gt;长期更新&lt;/h1&gt;&lt;p&gt;由于实验室服务器用的是Linux系统，平时都是用ssh登录管理文件；另外，计算机专业不会Linux那肯定是说不过去的。之前只</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>大二平日随笔XX</title>
+    <link href="http://example.com/2022/05/28/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XX/"/>
+    <id>http://example.com/2022/05/28/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XX/</id>
+    <published>2022-05-28T14:30:19.000Z</published>
+    <updated>2022-05-28T15:09:22.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="院系杯结束，准备退休了"><a href="#院系杯结束，准备退休了" class="headerlink" title="院系杯结束，准备退休了"></a>院系杯结束，准备退休了</h1><p>今天忙了一整天搞院系杯，我总体还是比较满意的，各部门分工比较顺利，也在计划的时间内完成了比赛。这种比赛还是研究生参加的更多。现在可以算是身心俱疲，这次比赛结束，我的会长生涯也基本到此为止了。担任会长这一年来，我也成长了不少。我变得自信了，能够去处理各种事情，对未知的事物也不再恐惧。但比较可惜的是，自己还是有一层摆脱不掉的孤独。我确实不适合做那种处事圆滑，左右逢源的人。前一段时间做年审材料过于应付，别到时候社团被降星了。</p><img src="/2022/05/28/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XX/3.jpg" class="" title="看得到吗"><p>上周二，周三写了计组综合实验，写了整整两天，做出一个文本编辑器，还是比较有成就感的。</p><img src="/2022/05/28/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XX/1.jpg" class="" title="看得到吗"><p>当天晚上。想要买显示器，在京东翻来翻去，终于找到一款自己喜欢的。昨天就到了，迫不及待的开始拨弄。接下去就是各种大实验，期末考了，还有大创，又可以开始忙了。</p><img src="/2022/05/28/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XX/2.jpg" class="" title="看得到吗"><p>这段时间还有思想上的所收获，比如思考出了“人意识上最基础的本能是‘解释’”这样的结论。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;院系杯结束，准备退休了&quot;&gt;&lt;a href=&quot;#院系杯结束，准备退休了&quot; class=&quot;headerlink&quot; title=&quot;院系杯结束，准备退休了&quot;&gt;&lt;/a&gt;院系杯结束，准备退休了&lt;/h1&gt;&lt;p&gt;今天忙了一整天搞院系杯，我总体还是比较满意的，各部门分工比较顺利，也</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>大二平日随笔XIX</title>
+    <link href="http://example.com/2022/03/31/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XIX/"/>
+    <id>http://example.com/2022/03/31/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XIX/</id>
+    <published>2022-03-31T12:52:20.000Z</published>
+    <updated>2022-03-31T13:33:44.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="还是不可避免的忙了一段时间"><a href="#还是不可避免的忙了一段时间" class="headerlink" title="还是不可避免的忙了一段时间"></a>还是不可避免的忙了一段时间</h1><p>周四了，我却有一种周五晚上周末开始的感觉。为什么呢，这学期实验是真的多，虚拟机还老开不起来，搞我心态。今晚刚写完了计租lab1的实验报告，这样一来，清明前的ddl就只剩Python课的一个作业了。</p><p>昨晚把鼠标落机房了，今天下午去拿，结果骑车到机房楼下的时候发现我的车锁掉了，我58买的密码锁呀！拿回鼠标后，我再骑车原路返回去找车锁，一边还在回想那几个比较颠簸的路段，很有可能是在那些地方掉的。谢天谢地最后终于在宿舍楼下找到了车锁。好久没有这么倒霉过了。</p><p>不过现在感觉挺安详的，就是那种，周末到了的安详。</p><p>家里情况也还不错，听说爸妈下个月很可能要涨工资了，应该可以改善一下家里的生活质量。不知道现在应届大学生能拿到个什么水平的工资，也不知道985大学生能拿到什么样的工资，学校究竟是不是旨在培养一个人给别人赚钱的能力，这些问题我都还没搞清楚。但是此时此刻我却不觉得自己的家庭有什么让我遗憾的地方，或许这就是没有被异化的美好吧。最近在看一本叫《穷爸爸富爸爸》的书，这本书被鼓吹“财商教育”。我不是很喜欢“财商”这个词，感觉这是个伪概念。不过总之希望能有点收获吧。</p><p>我不知道此时此刻的幸福是否只是运气。今晚还看到某二本大学一女生心梗，因疫情防控救护车无法进入学校，耽误救援时间导致死亡的消息。虽然与我无关，但这件事字里行间都充满着绝望。当然，校方该压消息的还是要压。</p><p>记得一学长说过，大学四年没谈过一场恋爱不是很遗憾吗。我对此也只能无奈的笑笑了。不过，我已经意识到，真正遗憾的另有其事。</p><p>我可能很多时候过于理性，偏执与清醒。我很讨厌把黄河九龙江啥的比作母亲之类的比喻，好像你跳下去他就不淹死你似的。义眼丁真，鉴定为：纯纯的矫情。</p><p>目前看来，应该大刀阔斧地学，然后才能改善作息，饮食，锻炼，英语等等方面。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;还是不可避免的忙了一段时间&quot;&gt;&lt;a href=&quot;#还是不可避免的忙了一段时间&quot; class=&quot;headerlink&quot; title=&quot;还是不可避免的忙了一段时间&quot;&gt;&lt;/a&gt;还是不可避免的忙了一段时间&lt;/h1&gt;&lt;p&gt;周四了，我却有一种周五晚上周末开始的感觉。为什么呢，</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>大二平日随笔XVIII</title>
+    <link href="http://example.com/2022/03/12/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XVIII/"/>
+    <id>http://example.com/2022/03/12/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XVIII/</id>
+    <published>2022-03-12T13:05:22.000Z</published>
+    <updated>2022-03-12T14:32:26.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="真是放浪形骸之外"><a href="#真是放浪形骸之外" class="headerlink" title="真是放浪形骸之外"></a>真是放浪形骸之外</h1><p>今天这个植树活动我是从上周就开始期待了。</p><p>今天上午写写量子物理作业，中午和zy吃了个饭。他能接下会长这个位置是有点出乎我意料的，好像上学期我问他后他说肯定不当的。ssy和lx都解决当会长后，我一开始还不太敢问他要不要当。我甚至连要怎么从21级的新生中选拔都考虑了一会。中午跟他讲了讲羽协的当务之急，我的一些设想，不知道他听进去了多少。不过还是要点名批评一下中午的东北王，毛血旺主要是一些血豆腐和午餐肉，点了个什么豆腐更是糊弄人，上菜还慢。属实是拉了。</p><p>回到寝室后不久就要出发了，跟我预想的一样，换上短裤短袖刚刚好。我还喷了花露水，万一那里蚊子一堆。从宿舍楼下走到校车的路上我就开始兴奋了，吹着合肥的风，晒着合肥稚嫩的太阳。然后坐上大巴，真是很有旅游的感觉。到达目的地后，上厕所，排队，入园，大自然的风光让我非常惬意。听着工作人员说啥从泰国搞来的600万的松树，从日本搞来的2000一条的观赏鱼，这太有旅游的感觉了。然后我看到了卖吹泡泡的摊子，便去买了一瓶玩，真好玩。然后，还玩了啥？手推车。然后还好像就是植树了。不过这真的不能算是植树。工作人员已经基本上把树种好了，只需要我们再填点土就行了，毫无种树的体验感。</p><p>其实现在想起来也没有玩什么很特别的东西，我能玩的那么开心，很大一部分是心态的作用。这种出了校门，来到大自然中的体验在我看来是很珍贵的。我玩得开心的时候甚至忘了今天是星期几，忘了现在是上午下午，忘了为什么会来这里。</p><p>后来还来了什么志愿者的拍照，让我们换上衣服拍了一张，不过这其实好像有点猫腻，我们好像给那些志愿者协会冲人头了。因为这事少院的一些人和工作人员有点小冲突。最后导致工作人员拍的照片都删除了，应该也少了几张我的照片。我对维护正义没什么兴趣，毕竟我觉得大多数的正义感都是挺无知的歇斯底里。还比较讨厌的是起的这些冲突浪费的时间让后面的自由观赏时间没了。少院的学生还是比较有想法的，不肯忍气吞声。不过我认为这事不太好评判，这其中的利益关系很可能没有表面看上去“志愿者组织让我们冲人头数后骗取政府的拨款”那么简单。这个志愿者组织是否是诚心诚意想要为社会做贡献？学校是否知晓这件事情？甚至当前的税收是否合理？我可能容易想多。</p><p>昨天跟妈视频聊天的时候我说要穿短裤短袖，因为我看过气温并且我们到时候肯定是在太阳底下活动，她说我腿太粗会吓到女生。我有点吃惊，她怎么会这么说。不过我也很快想到了一个解释：妈手臂上的胎记让她从小自卑，害怕吓到别人，以至于到现在对别人都多少沾点讨好型人格。实在是让人不爽的解释，可能我还是太被条条框框束缚了，生怕干出点啥没法让别人开心的事。有时候太照顾别人的感受是会失去自我的。对于无关的人，我应该有这样的态度：你是什么√8</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;真是放浪形骸之外&quot;&gt;&lt;a href=&quot;#真是放浪形骸之外&quot; class=&quot;headerlink&quot; title=&quot;真是放浪形骸之外&quot;&gt;&lt;/a&gt;真是放浪形骸之外&lt;/h1&gt;&lt;p&gt;今天这个植树活动我是从上周就开始期待了。&lt;/p&gt;
+&lt;p&gt;今天上午写写量子物理作业，中午和zy</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>大二平日随笔XVII</title>
+    <link href="http://example.com/2022/03/03/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XVII/"/>
+    <id>http://example.com/2022/03/03/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XVII/</id>
+    <published>2022-03-03T14:59:42.000Z</published>
+    <updated>2022-03-03T15:46:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="接受，并为此自豪"><a href="#接受，并为此自豪" class="headerlink" title="接受，并为此自豪"></a>接受，并为此自豪</h1><p>今天上了本学期第一节早八，量子物理。昨天运筹学作业把我心态搞崩了，单纯形表算了半天愣是算不出来。气起来今天直接写了个解单纯形表的程序，把问题解决了。看了一下程序输出，发现自己昨天手算的时候第二个表就算错了，淦。</p><img src="/2022/03/03/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XVII/1.png" class="" title="程序"><p>早八上课前就开始写程序了，用iPad带个小键盘写的，结果iPad写程序还勉强能写，调试就比较难搞了，没办法只能先上传到github上。上午3，4节是羽毛球课，这学期的羽毛球课有点无聊，没有对手，但是练网前挑球左一下右一下的居然也挺累。中午睡的挺香的，没定闹钟，一下子睡到了15：22，下午的课差点就迟到了。听说我中午打呼噜巨响，把室友给崩醒了。</p><p>今天看完了《人世间》。寒假我就开始跟爸妈一起看这部剧，当时看到周家父母去世的时候我竟也忍不住掉眼泪。这部剧有很多剧情是值得我们反思的，比如对待亲人，对待朋友的方法，比如在遭遇挫折的时候如何认清当下最重要的事物。无论什么时候，人才是最重要的，过分追求功名利禄是会将人异化的。但至于什么是异化呢？“异化”这个词我是在寒假的时候读《穿透》这本书看到的。现在我有了新的体会：“异化”就是被剥夺了感受幸福的能力。当人们开始因为没有得到更多的东西而感受不到幸福的时候，他们就变得越来越不可能再珍视身边的人。所以成功的PUA，也许就是让人们无缘无故降低幸福感的话术。</p><p>所以我该怎么做呢？我应该为自己的一切事实感到自豪和幸福。我曾认为自己从小缺少和同龄人的接触导致我现在社交能力不行，甚至觉得是自己的家庭对自己束缚的太严重了。现在想想，我可能确实没什么社交的天赋，但这有什么关系呢？这只是我没能得到的东西之一，不必为此感到失落或遗憾。确实跟我共情的人不是很多，比如说应该没什么人会在博客上写自己的种种思考。但是我为什么不能因此自豪呢？非要遵从别人的价值观来感到稳妥吗？</p><p>高傲，沉稳，充满激情。这才是我该有的姿态。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;接受，并为此自豪&quot;&gt;&lt;a href=&quot;#接受，并为此自豪&quot; class=&quot;headerlink&quot; title=&quot;接受，并为此自豪&quot;&gt;&lt;/a&gt;接受，并为此自豪&lt;/h1&gt;&lt;p&gt;今天上了本学期第一节早八，量子物理。昨天运筹学作业把我心态搞崩了，单纯形表算了半天愣是算不出</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>大二平日随笔XVI</title>
+    <link href="http://example.com/2022/02/23/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XVI/"/>
+    <id>http://example.com/2022/02/23/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XVI/</id>
+    <published>2022-02-23T15:14:12.000Z</published>
+    <updated>2022-02-23T15:40:12.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="生活逐渐步入正轨"><a href="#生活逐渐步入正轨" class="headerlink" title="生活逐渐步入正轨"></a>生活逐渐步入正轨</h1><p>开学三天了。来学校的时候，我感觉非常的不想开学，心中充满了“寒假怎么就结束了”的懊恼。上学期图论和模数电路两门7学分的3.0，直接把我的GPA给拉没了；其他很多课该拿4.3的，也只拿了4.0。哎，痛苦。</p><p>不过，痛定思痛，我反思了一下上学期的学习，感觉自己的主要问题是学得不扎实，模模糊糊的，导致考试题写不对，写的慢。到后面ddl一堆，然后作业也跟不上了，这样学习就失去了乐趣，效率大大降低。最终落得一个惨淡的结果。</p><p>所以这学期我打算学的踏实一点。首先是发动“作业日清运动”，每天的作业当天完成，可以及时地巩固知识点。然后要利用多出来的时间补充自己各方面的短板和学习感兴趣的东西。我已经邀了yjq一起学，目前进行的不错。周一布置了一个下周五交的调研报告，我们当天就完成了。</p><p>这学期打算开始学托福，已经报了新东方的托福班。其实到时候出不出国是另外一回事，花这几千块钱能把英语学好，也够本了。</p><p>寒假基本上把能吃的肉都吃了一遍，还吃了一堆零食，最终胖了7斤，现在回学校也该开始减肥了。今晚去健身房跑了4km。跑步机还是跑的不舒服，下来的时候头很晕。前三个晚上都是喝酒保证及时入睡，今天应该不需要了，中午没睡，而且还有运动。</p><p>今天去找老师签社团活动的场地申请了，结果老师说我们把灯光最好的场地都占了，不合适，改占成了一边的所有场地。 然后拿去交给综合馆的时候，发现跟别的场地申请冲突了，不过临时改成了占另外一边的场地，大概也就没事了。</p><p>刚开学的第一周总归来说是挺惬意的，没什么压力，希望这学期能有所建树。</p><img src="/2022/02/23/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XVI/1.jpg" class="" title="元宵节">]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;生活逐渐步入正轨&quot;&gt;&lt;a href=&quot;#生活逐渐步入正轨&quot; class=&quot;headerlink&quot; title=&quot;生活逐渐步入正轨&quot;&gt;&lt;/a&gt;生活逐渐步入正轨&lt;/h1&gt;&lt;p&gt;开学三天了。来学校的时候，我感觉非常的不想开学，心中充满了“寒假怎么就结束了”的懊恼。上学期</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>大二平日随笔XV</title>
+    <link href="http://example.com/2022/01/27/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XV/"/>
+    <id>http://example.com/2022/01/27/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XV/</id>
+    <published>2022-01-27T03:18:06.000Z</published>
+    <updated>2022-01-27T04:57:44.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="月薪7000刀？"><a href="#月薪7000刀？" class="headerlink" title="月薪7000刀？"></a>月薪7000刀？</h1><p>寒假回家这几天为了打发时间，看完了b站的一部番，《樱花任务》。讲一个振兴日本乡村的故事，还有一些对大都市和乡村之间选择的思考，看看可以图一乐。</p><img src="/2022/01/27/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XV/1.png" class=""><p>说正经的</p><p>前一段时间听说才子服装店老板娘女儿去美国读研，已经签了实习的公司，月薪7000美金。香港中文大学读的本科，应该是属于那种靠花钱上的学校。这样一来，我有点心动了，毕竟这个钱给的实在太多了。而且国外貌似不用像国内这样996，然后房价还巨高。</p><p>不过话说回来，这也挺异想天开了，毕竟之前一点也没有想过出国留学，现在就连出国留学需要做哪些准备，要考哪些东西，以及要报哪些辅导班都还不太清楚。</p><p>眼下需要做的还是让自己更理想一点，然后可以了解一下这方面的内容，提高一下英语什么的吧。</p><p>我还有很多方面需要完善，我得果断一点。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;月薪7000刀？&quot;&gt;&lt;a href=&quot;#月薪7000刀？&quot; class=&quot;headerlink&quot; title=&quot;月薪7000刀？&quot;&gt;&lt;/a&gt;月薪7000刀？&lt;/h1&gt;&lt;p&gt;寒假回家这几天为了打发时间，看完了b站的一部番，《樱花任务》。讲一个振兴日本乡村的故事，还有</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>大二平日随笔XIV</title>
+    <link href="http://example.com/2022/01/24/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XIV/"/>
+    <id>http://example.com/2022/01/24/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XIV/</id>
+    <published>2022-01-24T13:18:09.000Z</published>
+    <updated>2022-01-24T14:08:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="不知不觉回家一周了"><a href="#不知不觉回家一周了" class="headerlink" title="不知不觉回家一周了"></a>不知不觉回家一周了</h1><p>三个室友里有两个13号就考完的，还有一个是15号下午考完，我最惨，考到16号晚上。好像是14号的时候，我就开始畅想期末考完后的滋润生活了。当时是这么想的，17号回家动车上五个小时可以把ICS加分实验，甚至连同实验报告都给做了。下午4点下动车，晚餐就可以喝上家里的汤了。然后就可以开始逛街，买过年衣服，学自己感兴趣的东西，约约打羽毛球，跟充满压力的考试时候比起来，这样的日子相当舒服。</p><p>今天打开手机日历一看，居然已经回家一周了，感觉假期生活也有点乏味起来。</p><p>这些天先是看了《网络是怎样连接的》，看到第三章，感觉概念太多了。之前在动车站等候检票的时候，打电话给教务处老师，说明了脚本抢课账号被封的情况，结果那个时候他们才开始讨论对于这种情况要怎么处理。不久后就给我解封了。解封之后我当然是不甘心，又花了一天学了点HTML和JavaScript，写了个新脚本挂上捡漏，可惜的是，到现在都还没有捡到。</p><img src="/2022/01/24/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XIV/1.png" class="" title="看得到吗"><p>期间还打了一次羽毛球，竟然还是打不过那些大叔，之后肌肉酸痛了两三天。</p><p>放假前就想着今年过年想穿战壕风衣，昨天终于把一整套过年衣服买好了。本来想买卡其色的风衣，结果要年后才有货没办法只能换成藏青色。所以想要搭配一条卡其色的裤子，结果找了好几家店都没有找到，感觉冬天的裤子大多都是深色系的。</p><img src="/2022/01/24/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XIV/2.jpg" class="" title="看得到吗"><p>其实昨晚本来打算去厦门玩两天的，但是我发现自己其实没什么兴趣。我总有一种受到敦促的感觉，我知道自己还没得到那种境界，所以眼下的很多娱乐都变得索然无味。</p><p>另外，这个世上还存在许多未知等待我去探索。我究竟身处于一个怎样的社会？怎样的国家？权利运作的原理是什么？996和内卷是如何产生的？看到白岩松建议推行“自愿”延时退休的视频，我感受到了一丝魔幻。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;不知不觉回家一周了&quot;&gt;&lt;a href=&quot;#不知不觉回家一周了&quot; class=&quot;headerlink&quot; title=&quot;不知不觉回家一周了&quot;&gt;&lt;/a&gt;不知不觉回家一周了&lt;/h1&gt;&lt;p&gt;三个室友里有两个13号就考完的，还有一个是15号下午考完，我最惨，考到16号晚上。好</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>大二平日随笔XIII</title>
+    <link href="http://example.com/2022/01/16/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XIII/"/>
+    <id>http://example.com/2022/01/16/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XIII/</id>
+    <published>2022-01-16T14:00:22.000Z</published>
+    <updated>2022-01-16T17:36:32.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="寒假开始了"><a href="#寒假开始了" class="headerlink" title="寒假开始了"></a>寒假开始了</h1><p>今天晚上考完了最后一门图论，大二上的期末考，终于结束了。明天就回家了，10点上车，下午3点到家，然后就可以开始吃吃喝喝，买新衣服了。</p><img src="/2022/01/16/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XIII/1.png" class=""><p>大二上学期就这么结束了，想来还是有些遗憾，自己没有成为心中理想的样子。不过这一整个学期经历过来，思想上的收获还是有的。</p><p>前两天看到了那个北京朝阳区实验小学老师辱骂学生的事，实在是让我有点触目惊心。那两个老师的语气，还有其他学生的起哄，这他妈谁顶的住。难道这就是所谓的更好的教育资源吗？我一向排斥北上广深这些房价巨高的地方，感觉过去就是给资本家打工。掏光积蓄，付个首付，再背上几十年的房贷，最大也只能买个七八十平的房子。有人说北上广深的教育资源是其它任何地方都比不上的，仔细想想，这本末倒置了。人们总是容易忽视人本身的重要性，而追求过多外在的东西。与其进这一所所谓的教育资源丰富的学校，然后低声下气，甚至对于老师都有过分的崇拜，在我看来，还不如像我一样。读个县城的小学，中学，通过农村专项混个985读一读。或许北京的学校出的人才更多，甚至有可能视频里那个趾高气扬的老师对教学颇有经验，指导出了很多优秀的学生，但是对于学生本人来说，最后在学业上成功与否，很大程度上取决于他是否从学习中获得了足够的乐趣。引导孩子对知识的兴趣，对世界的独立思考，这很大程度上是为人父母应该做的，而不是一股劲想要挤进大城市，追求所谓的教育资源，用尽一生还房贷，996给资本家打工。</p><p>现在已经是2022年了。今年5，6月份又要进行社团换届了，我也将把羽协传给下一任会长。下学期只有16周，考完之后就要搬宿舍。709里，我读计算机，其他三人一工一管一人文，换宿舍之后，可以说是各奔东西了。现在想想，就已经有点舍不得了。我们宿舍都是通过高考的优惠政策进来的，我和另外两个一样，是农村专项降本一进来，还有一个是国家专项进来的。大家都不是啥大富大贵人家，四个人里面可能我花钱是最不含糊的。我们相处的也挺融洽的，大家都挺淳朴的，很多事情都可以相互包容。应该说，在科大里确实是没见过知乎上说的那些拉帮结派，官僚主义。ljc这人不错，很多地方值得我学习。一方面吧，他学习能力是有的，还挺强。更重要的是，很多事情，他放的下，活的比较快乐，每天晚上都睡得挺好。在这一点上，我就逊色多了。这学期我是最晚考完的，现在宿舍就只剩我一个人。</p><img src="/2022/01/16/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XIII/3.jpg" class=""><p>这个寒假，我还是想学点东西的。或许其实学多少东西不重要。重要的是，我能达到那种在学习中感受到快乐的状态。眼下还是有很多东西可以学的。前两天因为用脚本刷课，被封号了，到现在都还没给我解开。</p><img src="/2022/01/16/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XIII/2.png" class=""><img src="/2022/01/16/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XIII/4.jpg" class=""><p>这不得回去学一学网页前端，计算机网络还有JavaScript的相关知识，写一个更强的脚本出来。希望能够度过一个充实的寒假吧。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;寒假开始了&quot;&gt;&lt;a href=&quot;#寒假开始了&quot; class=&quot;headerlink&quot; title=&quot;寒假开始了&quot;&gt;&lt;/a&gt;寒假开始了&lt;/h1&gt;&lt;p&gt;今天晚上考完了最后一门图论，大二上的期末考，终于结束了。明天就回家了，10点上车，下午3点到家，然后就可以开始吃吃喝</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>大二平日随笔XII</title>
+    <link href="http://example.com/2021/12/18/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XII/"/>
+    <id>http://example.com/2021/12/18/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XII/</id>
+    <published>2021-12-18T07:07:08.000Z</published>
+    <updated>2021-12-18T09:30:02.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="球拍拉线"><a href="#球拍拉线" class="headerlink" title="球拍拉线"></a>球拍拉线</h1><p>下周就是第16周了，很多课都结课了，这学期将要步入尾声。有点遗憾，感觉这学期学到的东西不够多。发现自己快一个月没有更新博客了，我已经忙到没有时间闲下来思考一些东西，这不应该。</p><p>这三周每周打断一根拍线，就在这周，终于把备用拍的线也打断了。没办法了，今天就骑个小电动车。跑到几公里外去拉线。</p><img src="/2021/12/18/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XII/1.jpg" class=""><img src="/2021/12/18/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XII/2.jpg" class=""><p>复变期末计算错多了，还好期中考了96，但是这样我也痛失4.3，最终4.0收场。这2学分的4.0只让我的gpa提高了0.01。我上学期那些门课的3.0，3.3，让我的gpa足足下降了0.2。我总算亲身体验到，把gpa往上提是多么艰难。</p><p>不过这样一来，我产生了一种想法。目前我的gpa虽然捞不到多少奖学金，但是保研还是有希望的。再加上，提高gpa实在太难，太慢了，所以，我似乎可以把gpa看得轻一点。我要追求的是，在学习中真正的感受到快乐，而不是为了gpa去读书。而且很有可能，以这种心态学习，我才会学的好，gpa也会更高。</p><p>前两天看到了一个北大的大三学生写的CS自学指南。里面总结了很多计算机相关的课程资源，大多是国外名校的公开课。优秀软件，数学，编程相关，编程无关等等一应俱全。这确确实实的激起了我学习的欲望。由于是国外的课程，从教材到网课全是英文，这也可以顺便锻炼我的英语水平。</p><p>我发现我有个缺点是容易受外界评价的影响，没办法保持自己的主见，这是我没有想到。计算机专业的培养方案里，多了“量子物理”这门课。大部分学生对此颇有怨言。我发现看着他们骂骂咧咧，我也变得抵触这门课。不过，我静下心来想，其实自己对这个世界的运行原理有着一种强烈的、本能的好奇。所以当我重新问自己是否想要学这门课的时候，我发现我还是想学的。之前产生厌恶这门课的情绪，很大一部分是源于他人的观点，还有就是gpa降低后，我的好奇心被抑制了，变得畏缩。这得改。</p><p>目前还有数电实验大作业，心理学期末论文，数据结构大作业，ICS的一堆lab。纯纯的ddl战士啊。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;球拍拉线&quot;&gt;&lt;a href=&quot;#球拍拉线&quot; class=&quot;headerlink&quot; title=&quot;球拍拉线&quot;&gt;&lt;/a&gt;球拍拉线&lt;/h1&gt;&lt;p&gt;下周就是第16周了，很多课都结课了，这学期将要步入尾声。有点遗憾，感觉这学期学到的东西不够多。发现自己快一个月没有更新博客了</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>大二平日随笔XI</title>
+    <link href="http://example.com/2021/11/23/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XI/"/>
+    <id>http://example.com/2021/11/23/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94XI/</id>
+    <published>2021-11-23T14:46:05.000Z</published>
+    <updated>2021-11-23T15:38:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="换新iPad了"><a href="#换新iPad了" class="headerlink" title="换新iPad了"></a>换新iPad了</h1><p>前一段时间跟妈打电话的时候，吐槽了一下自己的iPad用不了笔，导致我的ics作业需要打印出来写。因为部分题目没做标注的话，是真的很不好写。结果上周六晚上，跟妈打电话聊着聊着，就真决定搞个新iPad了。今年的iPad Pro搭载了M1芯片，性能直接甩了以前的Axx芯片的一大截。那我当然是直接冲了。周六下的单，周日就到了。iPad加笔，6500+，膜和保护套200+，后来又买了个键盘，罗技k380，今天到货，159。整套弄下来，应该7000左右。这波没有在暑假买有点亏，不然的话可以领个耳机，咸鱼转手卖掉也能回个700块。当时就应该想想自己能不能在一年之内都不买iPad，如果不能的话，当时就应该买了。当然，用的是挺舒服的。现在我甚至可以用iPad写代码。希望不要买前生产力，买后爱奇艺吧。</p><p>今天羽毛球俱乐部又忘记签退了，痛失5分。不过发生了更有意思的事情。这周末要举行师生赛，所以很多老师今晚都来中区体育馆练球，其中好像有个姓周的校长助理。他们说好是从五点多打到七点半，结果到我们上课的时候还意犹未尽，不愿意走。但是他们用的场地是我们上课的场地，恰好今天老师又没来，过60岁生日去了。今天我是教辅人员。</p><p>今天进场馆，那些工作人员就跟我们说那几块场地怎么样怎么样的。还说什么周校长在那打球？我想着我们校长不是姓包吗，后来才知道是校长助理。就一校长助理，也敢自称校长，现在想想，这人应该不是什么好鸟。不过我们去要场地的时候，好像也没遇到多大的困难。就是后来拿手机的时候，发现老师给我打了15个电话。现在我也不知道这个是发酵的什么样了。听老师说是因为我们占了六个场，那些教工“很不高兴”。</p><p>这是我在科大第一次感受到官僚主义吧。就一校长助理，占了我们上课用的场地，还这么理直气壮，“很不高兴”。不过我不想过多的站在道德的制高点激扬文字，我是思考一下这背后权力运行的原理。</p><ul><li><p>当我一针见血地问场馆工作人员，我们的校长不是姓包吗，这个周校长是谁？的时候，她们居然也说不清楚，但是还是恪尽职守地顺从着。</p></li><li><p>后来我们去要场地的时候，他们还是让出来了。但这不妨碍后来老师给我打了15个电话。或许这可以叫做，权力的延迟性。</p></li><li><p>事后我发现，我竟然对此事有负罪感，我认为是自己没有处理好这些事情，导致老师的60岁生日平添风波。理性分析一下，这是典型的讨好型人格，要不得的。</p></li></ul><p>不过弄点这种不寻常的事也好，免得生活过于无趣。能引起我的思考，给我点启发，也是不错的。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;换新iPad了&quot;&gt;&lt;a href=&quot;#换新iPad了&quot; class=&quot;headerlink&quot; title=&quot;换新iPad了&quot;&gt;&lt;/a&gt;换新iPad了&lt;/h1&gt;&lt;p&gt;前一段时间跟妈打电话的时候，吐槽了一下自己的iPad用不了笔，导致我的ics作业需要打印出来写。因为</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>大二平日随笔X</title>
+    <link href="http://example.com/2021/11/20/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94X/"/>
+    <id>http://example.com/2021/11/20/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94X/</id>
+    <published>2021-11-20T11:58:14.000Z</published>
+    <updated>2021-11-20T16:12:56.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="我得『主动』点"><a href="#我得『主动』点" class="headerlink" title="我得『主动』点"></a>我得『主动』点</h1><p>今天上午没有去毛球俱乐部，而是去了复变习题课。但是感觉亏了，收获不是很大。不过这是我第一次翘了俱乐部，感觉卷这个积分也没什么意义。</p><p>下午参加了班级羽毛球赛，险胜，拿了冠军。算是组织的比较不错吧。决赛打了三局，最后一局打到了22:20，我拿到了冠军，算是非常好的结果。想想这次比赛，奖品和球，比赛流程，基本上是我策划的方案，看来我在羽协里学到的东西，也算是能派上用场。</p><img src="/2021/11/20/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94X/1.jpg" class=""><img src="/2021/11/20/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94X/2.jpg" class=""><p>晚上来到电三楼，验收了电梯模拟大作业，以及查了一下数字电路的期中考卷。验收比我想象得顺利，甚至我还水了一个“调度优化”。查了一下数电的试卷，一题粗心从一开始就弄错，一题没化简状态图，直接导致解题非常繁琐，还耗了我大量时间，最后一题直接没时间写，得了个零分。跟我猜的差不多，我现在掌握了大部分内容，但是又没掌握透，解起题来也不熟练，容易出错。</p><p>我想起了二年级的时候，奥数拿了年段倒数第一，那时候是不是比现在稍微更窘迫一点呢？但是后来我也没有放弃，四年级拿了二等奖，五年级拿了一等奖。我觉得现在不要带着期末，一定要考好，把分数扳回来的心态去学这门课，而是要让自己真真正正发自内心想要把这门课读懂。这样一来，我才有胜算。</p><p>还有一点，我发现了自己的行为模式不够『主动』。昨晚开会决定比赛具体事宜的时候，我明明知道，是我的方案更好，但我总想着让他们来问我的意见，于是没有主动主张自己的想法。结果他们想了各种方案，发现都有不足的地方，最终还是回到了我的那个方案。以及有些事项我觉得是无所谓无关要紧的，有些事项我觉得是要首先考虑的，这些东西我不太会主动表达出来，而是想着别人问我的时候才说。这是我整个行为模式上的一个，算是缺点吧，不够『主动』。或许很多时候，机会就是靠主动来的。我不主动的原因大概也有些眉目，比如关于羽毛球裁判方面的策划，他们可以比较轻松的下结论，如果换做是我可能会考虑各种各样细节问题。看来我虽然从理性上认识到了现在的试错成本小，可以放手去做事，但是还是没有融入到行动上。</p><p>下周ICS期中，后周复变期末，然后就是第十四周了。这学期有三门课只有15周，那么这些课的期末考也就接踵而至了。目前还有ICS和数据结构的实验。哎，好充实啊。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;我得『主动』点&quot;&gt;&lt;a href=&quot;#我得『主动』点&quot; class=&quot;headerlink&quot; title=&quot;我得『主动』点&quot;&gt;&lt;/a&gt;我得『主动』点&lt;/h1&gt;&lt;p&gt;今天上午没有去毛球俱乐部，而是去了复变习题课。但是感觉亏了，收获不是很大。不过这是我第一次翘了俱乐部</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>大二平日随笔IX</title>
+    <link href="http://example.com/2021/11/16/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94IX/"/>
+    <id>http://example.com/2021/11/16/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94IX/</id>
+    <published>2021-11-16T15:49:56.000Z</published>
+    <updated>2021-11-16T16:25:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="自行车坏了"><a href="#自行车坏了" class="headerlink" title="自行车坏了"></a>自行车坏了</h1><p>真是祸不单行，今天自行车出问题了。后轮的轮轴出了点问题，导致轮子转着转着就卡到一边去。从食堂吃完饭出来骑着自行车就觉得有点不对劲，等到进校门的时候终于轮子转不动了。当时根本不知道是什么问题，后来才发现是轮胎卡到了旁边的杠上。</p><img src="/2021/11/16/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94IX/1.jpg" class="" title="看得到吗"><p>艰难的将车停到篮球场旁边，回宿舍找室友借的扳手等一些工具（他的自行车是网购的，到货后要自己组装，所以有送这些工具），又兴冲冲的跑去修车，结果以失败告终。果然，600块的自行车质量还是差了点。回宿舍的路上，一边想着怎么把车运到东区去，因为我的车是在东区买的。最终决定用手推车运送抛锚的自行车。</p><p>下午借手推车的时候，听到楼管说肥西路就有修车的地方。相比之下，肥西路近的多，所以我决定试试肥西路修车。我之前没印象肥西路有修车的地方，结果发现是那家可以修鞋子的摊子也可以修车。现在我的车已经送到了，修车铺跟师傅约好，明天中午去取。希望从此之后我的车可以支棱一点。后轮转不动后，交通工具顿时变成了交通累赘。现在是自行车，要是以后我有了小车，抛锚的时候，估计更够我受的。</p><p>物品还是不可避免的无聊呀，自行车会坏掉，电子系统容易出故障。羽毛球拍会掉磅，金属会被氧化。只有自我的提升才是永恒。那我稍微有点害怕的是，我不知道，我现在源源不断的想法，是源于我的个性，还是只因为我正年轻。</p><p>当时自行车骑着骑着直接转不动了，只能推着走，结果由于要把后轮提起来，走不了几步，就感觉手臂挺酸的。这时候旁边刚好路过两个建筑工人，衣服裤子上脏兮兮的，皮肤也黑，头发稍微有点发白。他们见我车坏了，便热情地上来帮忙。旁边刚好就是正在装修的食堂，建筑外面摆满了脚手架。他们搞来了扳手。试图恢复后轮错位的螺母，但最终还是没有修好。他们用口音很重的普通话向我解释是哪里出问题了，我努力的听着，好像是轴承里的钢珠没了。他们说找一辆跟我的车差不多的报废车，后轮如果还能用的话，他们可以帮我换上。不过，，我到哪去找报废车呀？感谢了他们之后，我把车牵到了篮球场旁边停着。下午用手推车把自行车运到修车点的时候，由于我自行车摆放的不合适。车把会拖在地上摩擦。这时候又来了一个工人，他教我把车倒过来放，这样就不会拖地上了。</p><p>这些乐于助人的工人，让我陷入了思考。衣服上的污渍，凌乱的头发，并没有成为他们与别人接触的芥蒂。我想起我有时有机会帮助别人，但是因为害羞或者说社恐不敢上前。难道是因为我的压力比他们大？</p><p>或许一个好的社会，便是让社会上的所有人都能够达到一定的幸福感。然后才有帮助别人的可能。似乎小时候老是被灌输“读书就是为了以后赚更多的钱”的思想。没人告诉我，读书还有的练就心境的作用。而且规规矩矩地读书也赚不了什么大钱，相比于创业成功的人。学习本身是可以带来快乐的。而且，强大的学习能力，是非常珍贵而且用钱买不到的。</p><p>读书只是学习的一种，其本质也是实现心境的提升。但是却被考试，工作绑在了一起。读书丧失了它作为学习的乐趣，其效率也就大打折扣了。</p><p>往好了说，我的提升空间还是很大的。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;自行车坏了&quot;&gt;&lt;a href=&quot;#自行车坏了&quot; class=&quot;headerlink&quot; title=&quot;自行车坏了&quot;&gt;&lt;/a&gt;自行车坏了&lt;/h1&gt;&lt;p&gt;真是祸不单行，今天自行车出问题了。后轮的轮轴出了点问题，导致轮子转着转着就卡到一边去。从食堂吃完饭出来骑着自行车就觉</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>大二平日随笔VIII</title>
+    <link href="http://example.com/2021/11/15/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94VIII/"/>
+    <id>http://example.com/2021/11/15/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94VIII/</id>
+    <published>2021-11-15T14:01:32.000Z</published>
+    <updated>2021-11-15T15:46:32.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="哎，数电失守了"><a href="#哎，数电失守了" class="headerlink" title="哎，数电失守了"></a>哎，数电失守了</h1><p>昨天晚上数电群里助教发了个“作业提交公示”的公告，我想着自己每次作业都交了，便没放在心上。今天才知道他们在公示文档里更新了期中考成绩。一查发现自己60分，心脏骤停。失败与否定，又一次席卷了我。最高分98，更可怕的是，我这次居然连平均分都没上。平均分65，66左右。</p><p>我反思了一下，这学期的众多课程里，数电确实是比较被我忽视的一门。我带着不听讲的习惯，数电的书又厚，学起来抓不到重点，复习的时候也不好复习。感觉自己的学习就像中老年人的健康状况，随随便便就出各种问题。</p><p>接下来，我得做点大刀阔斧的改变。或者叫，紧急备战状态？</p><p>改变自己所处的环境，平时没事的时候尽可能待在图书馆或者教室，并且不带手机。明天开始就不带手机上课吧。</p><p>尽可能的让自己投入到学习中去，断掉耗时的娱乐，比如象棋和扫雷。中午和晚上22：30之后时间再处理社团那些俗务。</p><p>评课社区上有人说书店的书太厚，文字太多。建议把老师上课的课件打印出来，直接在上面做笔记，我觉得这个方法可以试一试。另外，找个时间去查一下试卷吧，看看自己还有什么问题，是现在没有发现的。我得坚定下来，很多东西都是在我动摇的时候失去的。而且人一动摇，很多事情就办不好，执行力也会下降。</p><p>我发现我还是有些卑劣的软弱，我需要改变的东西还有很多。不要为此发愁，也是其中一项。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;哎，数电失守了&quot;&gt;&lt;a href=&quot;#哎，数电失守了&quot; class=&quot;headerlink&quot; title=&quot;哎，数电失守了&quot;&gt;&lt;/a&gt;哎，数电失守了&lt;/h1&gt;&lt;p&gt;昨天晚上数电群里助教发了个“作业提交公示”的公告，我想着自己每次作业都交了，便没放在心上。今天才知道</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>大二平日随笔VII</title>
+    <link href="http://example.com/2021/11/11/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94VII/"/>
+    <id>http://example.com/2021/11/11/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94VII/</id>
+    <published>2021-11-11T05:17:49.000Z</published>
+    <updated>2021-11-11T06:19:16.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="该调整一下了"><a href="#该调整一下了" class="headerlink" title="该调整一下了"></a>该调整一下了</h1><p>今天考了数电期中，凶多吉少了。我发现自己在学习上出现了比较大的纰漏。大概是，我学得不够投入。道阻且长啊。或许是因为最近压力比较大，没什么静下心来学习。但是日子总归是要过的，现在也还有转机。</p><p>前两天思考后我发现，最好的学习状态是学得开心，而不是负重前行。初中的我可能是学的最开心的时候，当时也天真烂漫，不断地超前学习，学多了也喜欢出风头。那个时候学到了一个新的知识点，我会马上想着怎么去用它。思考它揭示了什么道理。从而也让自己对某个学科的理解更加完备。再有就是，可以在同学面前装逼。当时好像也不怎么需要写题，就把该掌握的都掌握下来了。现在回想起来，可能是因为当时学的时候，自己思考的比较多。初中的我还有一点是，当时目标只是为了考上保送生，然而以我当时的成绩，只要保持住，保送生还是比较稳的，对高考还没有太多的想法，所以对未来也没有那么多压力，也不怎么迷茫。</p><p>其实现在的我，还是有这份好奇心的。但是可能有了那么多年的经历，我的心境已经不同了。心境——这就是我需要调整的地方。其实我也逐渐明白这个道理，所以现在这个机会，我得把握住。</p><p>看了讲希特勒的那些视频。我感觉自己缺少的就是这种，内心的坚信。仔细想来，我其实非常的被世俗所束缚，担忧996，担忧房价，担忧搞科研竞争激烈待遇还不好。世俗或许就是，把人的价值取向趋于一致，把人的快乐限定在几样低级的东西上面，从而磨灭掉人的个性。我也是时候摒弃这些不必要的忧虑了。</p><p>下周没有考试，是可以让我调整的一周。之后马上就会有ICS期中和复变期末。我也大概有思路了。这个时候，不要急着搞的这些有考试的科目。相反，先学概统。概统考试还早，作业也不急着交，适合用来调整状态。</p><p>有意思的是，看了那些视频，现在我感觉自己的学习也跟战略布置一样。比如，我可以说来个闪击概统？</p><p>家里倒是一派岁月静好。寒假“逼”妈去跑步之后，也非常不错地坚持下来了，瘦了有六七斤吧。双十一妈似乎打算买个跑步机，这样寒假回去，要是没得打球，也可以在家里跑步了。想想去年寒假回去，家里换了电视，沙发，这日子也是一天比一天好了。所谓岁月静好大概就是如此吧。</p><p>所以，我也不用太过紧张。就算啥也没混到，以后出来过着小日子，也差不到哪里去。真的，感觉也挺不错的。</p><p>另外，最近扫雷玩的多了。昨天玩扫雷的时候，我突然明白了赌博上瘾的原理。那种打小钢珠，打一下午输个几千块钱的，似乎跟扫雷有异曲同工的味道。大概都是不太需要思考的，基本可以凭条件反射进行的，最后成功了又会让你欣喜的东西。这样的东西还是该少碰点。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;该调整一下了&quot;&gt;&lt;a href=&quot;#该调整一下了&quot; class=&quot;headerlink&quot; title=&quot;该调整一下了&quot;&gt;&lt;/a&gt;该调整一下了&lt;/h1&gt;&lt;p&gt;今天考了数电期中，凶多吉少了。我发现自己在学习上出现了比较大的纰漏。大概是，我学得不够投入。道阻且长啊。或许</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>大二平日随笔VI</title>
+    <link href="http://example.com/2021/11/07/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94VI/"/>
+    <id>http://example.com/2021/11/07/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94VI/</id>
+    <published>2021-11-07T12:22:25.000Z</published>
+    <updated>2021-11-07T16:01:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="权力吗，我还是需要拿在手上的"><a href="#权力吗，我还是需要拿在手上的" class="headerlink" title="权力吗，我还是需要拿在手上的"></a>权力吗，我还是需要拿在手上的</h1><p>昨天实在是太累了，23点多就睡了。早上快7点醒了过来，精神抖擞。</p><p>我现在需要将我昨天的结论融进我的思想。或许一直以来我缺乏的就是这个，我所经历的失败，高考失利，退出英才班，很大程度上是因为我之前没有想清楚这个问题。</p><p>不过，其实我还剩下一个小疑惑。当时破防的我，决定不再为羽协鞠躬尽瘁了。不再申请各种赞助，能不参加的活动一律不参加，一切活动全部使用社团星级经费，这样一来报销也就方便得多了。</p><p>虽然最后手表是找到了，但我发现这并不能解决问题。我到底值不值得，这么忙？今天，这个问题一直时不时出现在我心里。</p><p>这几天我看了一系列的视频，讲一个落榜美术生的故事。当疯狂转化为了强大的执行力，居然会有这样的结果。不过希特勒还是有走错的地方，导致了他最终的失败。如果我能扫清内心的动摇的话，是不是也能在这个世界上留下几笔呢？</p><img src="/2021/11/07/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94VI/2.jfif" class=""><p>今晚玩扫雷的时候，我有点思路了。我发现，这是权力所在呀。</p><p>如果这个程度的腐败是常态化的，那么，我要把分配奖品的权力拿在手上。当时这些奖品是被抢走的，谁抢到就是谁的，没有秩序。权力在我手上的话，干活多的人，才有能分到这些剩余的奖品。这样一来，可以更好地调动干事干活的积极性，而且，要分的话也确实应该这么分。</p><p>考虑到有些奖品没什么吸引力，比如已经有体重秤的人大概不会想要再来个体重秤，我们还需要有些硬通货。答案是显然的，羽毛球这种消耗品肯定是最佳的选择。这次比赛申请了50筒球，现在剩了26筒，这样一来内联的球就有了。甚至，如果可以的话，留够内联的，剩下全是干事的。</p><p>或许，我可以牛刀小试一下。羽协如果能蒸蒸日上，这些东西都是阳光下的阴影罢了。</p><p>当然，如果这种做法导致协会被处罚的话，几个月的休整期也可以让我无案牍之劳形，何乐而不为呢？</p><p>我又不靠这吃饭。除了区区羽毛球协会会长，我还有更多更重要的身份。我还有我的幸福，以及我想要争取的幸福。</p><img src="/2021/11/07/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94VI/1.png" class="">]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;权力吗，我还是需要拿在手上的&quot;&gt;&lt;a href=&quot;#权力吗，我还是需要拿在手上的&quot; class=&quot;headerlink&quot; title=&quot;权力吗，我还是需要拿在手上的&quot;&gt;&lt;/a&gt;权力吗，我还是需要拿在手上的&lt;/h1&gt;&lt;p&gt;昨天实在是太累了，23点多就睡了。早上快7点</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>test_picture</title>
+    <link href="http://example.com/2021/11/07/test-picture/"/>
+    <id>http://example.com/2021/11/07/test-picture/</id>
+    <published>2021-11-07T02:48:18.000Z</published>
+    <updated>2021-11-07T02:58:46.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="这是一个测试"><a href="#这是一个测试" class="headerlink" title="这是一个测试"></a>这是一个测试</h1><p>尝试在博客里插入图片</p><p>不知道为啥test_picture会变成test-picture</p><p>失败了，好像要这样</p><img src="/2021/11/07/test-picture/1.jpg" class="" title="看得到吗"><p>果然，这样就看得到了。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;这是一个测试&quot;&gt;&lt;a href=&quot;#这是一个测试&quot; class=&quot;headerlink&quot; title=&quot;这是一个测试&quot;&gt;&lt;/a&gt;这是一个测试&lt;/h1&gt;&lt;p&gt;尝试在博客里插入图片&lt;/p&gt;
+&lt;p&gt;不知道为啥test_picture会变成test-picture&lt;/p&gt;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>大二平日随笔V</title>
+    <link href="http://example.com/2021/11/06/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94V/"/>
+    <id>http://example.com/2021/11/06/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94V/</id>
+    <published>2021-11-06T14:30:18.000Z</published>
+    <updated>2021-11-06T14:43:06.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="挺有收获的"><a href="#挺有收获的" class="headerlink" title="挺有收获的"></a>挺有收获的</h1><p>今天会是我大学生涯里的最有意义的一天，，之一。今天上午照常参加了羽毛球俱乐部。之后便去打印店拿奖杯，锦旗和横幅。然后去拿奖品，15个小米手表，30个体重称。我用手推车装着，一路从校外的东区小西门运到了中区综合馆。迄今为止我为办这些比赛所做的奔波，已经让我对这种忙碌都没啥感觉了。将产品送到综合馆之后，回宿舍换了身衣服，也就差不多时间该来比赛现场了，大概是13:00。西装革履的我，拿着话筒有模有样的主持开幕式。领导讲话，裁判长宣读比赛规则及注意事项，裁判员代表宣誓，运动员代表宣誓……这一切都结束了之后比赛就开始了。先打男单。然后是男双和女单。最后是混双。男双开始，我也去把身上的西服换成了运动短袖。我跟lzl组的男双，今天三场都赢了。我俩今天遇到的对手都是跟我们势均力敌的，然后刚好我们发挥的不错，全都赢了下来。对于书院来说，这是非常赚的。今天球打的挺开心的。所有项目结束后，光启跟冲之两个书院的得分相等，需要加赛。我去抽签，决定加的是一场混双。光启这边是男生校队顶流，带上一个比较普通的女生；冲之这里是两个都是校队，但是男生没有对面的男生强。总而言之，非常精彩，非常有观赏性，打了3局才分出胜负。这样一来，比赛就结束了。各书院排名从上到下分别是冲之，光启，时珍，守敬。颁奖，拍照，便是领奖品了。</p><p>我一开头说了，今天是我大学生涯中非常有意义的一天。如果只是这样皆大欢喜的话，我就不会用有意义来形容了。羽协似乎有个惯例，没发完的奖品会发给干事，裁判。奖品会剩是因为有人没领，或者书院的队伍人数小于奖品的总数。这次的冠军奖品是华米的智能手表，说实话，我挺想要的。最后这个手表剩了四个，大家争相把自己的名字填到龄表单上。我是第一个填的，领奖单上剩下的三个位置，很快也被填满了。结果大家把手表一拿，发现没我的份了，只有3个。但是领奖单上明明有四个位置，也就是说有人领了手表，但是没有签字，然而我把字签上了却没领到手表，相当于给别人做了嫁衣。这个时候，我破防了。为了办这个比赛，我操心各种事务，四处奔波，最后居然成为了别人的替死鬼。虽然我知道这些东西是严格来讲不属于我。但是如果要瓜分的话，我才是最有资格拿的。是我把这些奖品从大老远运到这里来，是我去填一堆单子，联系老师搞来的赞助。我顿时心灰意冷，想想啥事也不干的副会长，想想我忙碌了一天回寝室，看见的在打游戏的舍友，想想全天下能够安然入眠的人！这波我真没防住，我决定不干了。社团宣讲，游园会，场地申请，物资申请，展架放置申请，赞助申请，写各种策划，搬运奖品，联系老师颁奖，处理报销，我已俗务缠身。但是，就是忙完了这一切的我，最后还是没有分到那种一点点可怜的奖品。这种落差感让我仔细想来也不值得那么贪心，不值得让我如此失态。那个手表也就几百块而已，又不是啥稀世之宝。只是，我没心思去这样忙碌了。</p><p>ssy知道了这个情况，先是逐个确认领奖单上的人有没有代拿没签字的，之后还想把他自己领的手表给我，说羽协没人做事不行。我有点惊讶，说实话他也不是登记在团委的会长副会长啥的，只是社团内部封的采购部部长。平时干活他也很积极，办事能力也挺强。此时此刻，他的这种行为，可以说是高尚了。不过我没有收他的手表，我觉得我收下的话，自己实在是卑劣得无可救药。</p><p>我也看见了自己的丑态，真是狼狈不堪。并且，我似乎窥见了腐败发生的原理。这种组织者的忙碌，这种矛盾是天然就有的，如果多出来的手表没有被瓜分，而是被回收，那么我没有分到手表，心里上大概也没啥感觉。但如果这些手表将被瓜分，那么我觉得是理所当然要有我的份的。如果没有分到的话，我心里面确实是挺难受的。贪官进行腐败，或许是理直气壮的。</p><p>这样一来，我便知道我需要追求的是什么了。这个世界上最本质，最珍贵，也最高效的是人呀！我需要做的事是多结交ssy，lzl这样的人，而不是追求钱财，物品，GPA这些更低等的东西。上学期gpa炸了，让我有一种想要把gpa搬回来的，焦急心理。这就过犹不及了，这样会大大降低我学习的快乐。调整好心态，投入到学习中去吧。充满热情地学习，多跟ssy，lzl这样的人相处，这样一来，我的生活才会更加轻盈，自如。</p><p>虽然但是，结果笔锋一转。第4个手表找到了，掉在了箱子里，这当然是归我了。不过，今天的经历和领悟，还是非常有价值的。</p><p>目前我的想法就是，如果这样的做法有问题，导致羽协被警告或者有什么更严厉的处罚，我也可以安心读书了。我大不了被骂个几个月，这种事也没啥。最重要的是，我现在知道了我需要做的事情，我要努力的方向，我的过犹不及的地方。接下来，我可以走得更坚定了吧。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;挺有收获的&quot;&gt;&lt;a href=&quot;#挺有收获的&quot; class=&quot;headerlink&quot; title=&quot;挺有收获的&quot;&gt;&lt;/a&gt;挺有收获的&lt;/h1&gt;&lt;p&gt;今天会是我大学生涯里的最有意义的一天，，之一。今天上午照常参加了羽毛球俱乐部。之后便去打印店拿奖杯，锦旗和横幅。然后</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>大二平日随笔IV</title>
+    <link href="http://example.com/2021/11/05/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94IV/"/>
+    <id>http://example.com/2021/11/05/%E5%A4%A7%E4%BA%8C%E5%B9%B3%E6%97%A5%E9%9A%8F%E7%AC%94IV/</id>
+    <published>2021-11-05T11:17:04.000Z</published>
+    <updated>2021-11-05T12:58:40.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="英语演讲结束，明天四国大战"><a href="#英语演讲结束，明天四国大战" class="headerlink" title="英语演讲结束，明天四国大战"></a>英语演讲结束，明天四国大战</h1><p>今天英语演讲终于结束了，说实话感觉英语演讲给我的压力比数电期中还大。但是今天站在台上我其实不怎么紧张，声音自我感觉也挺洪亮的，比较不足的大概是时间不知道够不够长。这样一来，这学期的英语就结课了，周五早上的早课也就没了。再过一周复变也就结课了，又少了两节课。下周数电就要期中考了，目前还有一大堆东西要搞，数据结构，图论，数电，复变，概统，ICS的作业，数电，ICS的实验，数据结构的大作业。不过等明天四国大战打完，就应该可以多安心学习了。英语演讲和四国大战是让我比较操心的事。</p><p>明天下午四国大战就开打了，现在华米赞助的奖品还没有到手。不过我心里竟然不着急，而且一点也不焦虑，这也算是我的进步吧。上次“谁‘羽’争锋”赛，我一人骑着自行车运了8个体重秤到宿舍已经是极限了，这次有45个体重称，估计得想办法弄到那种手推车。我感觉我心里不着急，是因为我有一种“就算搞砸了也就搞砸了，没啥大不了”的思想。毕竟仔细想来我在这里的本质身份是学生，管社团只是我自己在发光发热。我也不靠这吃饭，没必要为此操劳过度。</p><p>不过话说回来我觉得我自己作为羽毛球协会会长做的还是蛮不错的，并且我也有心想要把这个社团做好，所以我也常反思，我有哪里做的不够的地方。目前想到的就是，我少了点社交能力。说实话，羽协干事成员不够多，虽然群里面有超过了一千人。群里关系比较密切的是一些研究生。还有一些新入学的学弟，他们很快就跟这些学长混熟了。说实话，他们在这方面能力上比我强得多。我还是有点社恐。</p><p>今晚从教室走回宿舍的路上，我也构想了一下良好的羽协将是什么样子。首先要有明确的部门划分，这一步目前来看算是做到一半吧，成立了宣传部，组织部和采购部。这些部门首先要有明确的职能，然后每届可以招点新人进来，干活主要让新人去干，老成员主要负责指导他们。这个指导不仅仅包含的工作上的指导，还可以为他们的学习以及生活答疑解惑，进而关系融洽了之后就可以了在群里讨论实事热点，线下约饭，或者约着去哪里玩之类的。二课学时可以让新成员干活更有动力。而新成员干活需要向老成员请教，这样就产生了互动，人际关系也就发展起来了。这样持续个几年，当各部门的成员遍布了大一到大四，硕士，博士，群里的信息也就充足了。也就是说，一个新入学的萌新，能够在这里解决学习生活中的各种疑惑，从数分考试怎么准备到一卡通丢了怎么补办，而且还能时不时约着吃吃玩玩，干活也有人作伴，羽协才能给他们一种归属感。说实话，有人作伴挺重要的。但是羽协目前似乎没有这种良性循环，或许是因为目前羽协的社交性质不够突出。</p><p>至少目前来看，我能想到这些点子好是吧，至于能不能像我想的那样去实现就不知道了。不过试一下也无妨，我当会长本来就是觉得这个时候试错成本低，可以放开手去干点事。就算干砸了一些事情，好像也没啥大不了的。如果在我当会长的这一年里面，我可以让自己更有自信，更敢于上台发言，事情没解决时少点焦虑，对社会运行的规则有更深入的理解，就已经算有收获了。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;英语演讲结束，明天四国大战&quot;&gt;&lt;a href=&quot;#英语演讲结束，明天四国大战&quot; class=&quot;headerlink&quot; title=&quot;英语演讲结束，明天四国大战&quot;&gt;&lt;/a&gt;英语演讲结束，明天四国大战&lt;/h1&gt;&lt;p&gt;今天英语演讲终于结束了，说实话感觉英语演讲给我的压力</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
